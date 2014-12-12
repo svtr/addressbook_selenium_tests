@@ -17,15 +17,15 @@ import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 
-	protected WebDriver driver;
-	protected String baseUrl;
+	protected static WebDriver driver;
+	protected static String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
 	@BeforeTest
 	public void setUp() throws Exception {
 	    driver = new FirefoxDriver();
-	    baseUrl = "http://localhost/";
+	    baseUrl = "http://localhost:8081/";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  }
 	
@@ -60,10 +60,11 @@ public class TestBase {
 		driver.findElement(By.name("new")).click();
 	}
 
-	protected void gotoGroupPage() {
+	protected void gotoPage(String namepage) {
 	
-	    driver.findElement(By.linkText("groups")).click();
-	}
+	    driver.findElement(By.linkText(namepage)).click();
+	} 
+	
 
 	protected void openMainPage() {
 	    driver.findElement(By.linkText("addressbookv4.1.4")).click();

@@ -3,12 +3,12 @@ package com.example.tests;
 import org.testng.annotations.Test;
 
 
-public class GroupeCreationTests extends TestBase{
+public class AdressCreateTest extends TestBase{
   @Test
-  public void testNonEmptyGroupCreation() throws Exception {
+  public void testNonEmptyGPhoneCreation() throws Exception {
     driver.get(baseUrl + "/");
 	  openMainPage();
-      gotoPage("groups");
+      gotoPage("add new");
       newGropCreation();
       GroupDate group = new GroupDate();
       group.groupname = "groupe name 1";
@@ -20,10 +20,10 @@ public class GroupeCreationTests extends TestBase{
   }
 
   @Test
-  public void testEmptyGroupCreation() throws Exception {
+  public void testEmptyPhoneCreation() throws Exception {
 	    driver.get(baseUrl + "/");
 		  openMainPage();
-	      gotoPage("groups");
+	      gotoPage("add new");
 	      newGropCreation();
 	      fillGropForm(new GroupDate(" ", " ", " "));
 	      submitGroupForm();
