@@ -14,9 +14,9 @@ public class GroupeCreationTests extends TestBase{
       group.groupname = "groupe name 1";
       group.header = "groupe header 1";
       group.footer ="footer 1";		  
-	fillGropForm(group);
-      submitGroupForm();
-      returnGroupPage();
+	  fillGropForm(group);
+      submitForm();
+      returnPage("group page");
   }
 
   @Test
@@ -26,7 +26,7 @@ public class GroupeCreationTests extends TestBase{
 	      gotoPage("groups");
 	      newGropCreation();
 	      fillGropForm(new GroupDate(" ", " ", " "));
-	      submitGroupForm();
-	      returnGroupPage();
+	      submitForm();
+	      returnPage("group page");
 	  }
 }

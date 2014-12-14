@@ -5,28 +5,42 @@ import org.testng.annotations.Test;
 
 public class AdressCreateTest extends TestBase{
   @Test
-  public void testNonEmptyGPhoneCreation() throws Exception {
+  public void testNonEmptyPhoneCreation() throws Exception {
     driver.get(baseUrl + "/");
 	  openMainPage();
       gotoPage("add new");
-      newGropCreation();
-      GroupDate group = new GroupDate();
-      group.groupname = "groupe name 1";
-      group.header = "groupe header 1";
-      group.footer ="footer 1";		  
-	fillGropForm(group);
-      submitGroupForm();
-      returnGroupPage();
+      AddressDate addr = new AddressDate();
+      addr.fname = "Ivan";
+	  addr.lastname = "Ivanov";
+	  addr.address = "Spb";
+      addr.home = "";
+	  addr.mobile = "89211111111";
+	  addr.work = "89211111111";
+	  addr.email = "my@mail.ru";
+	  addr.email2 = "my2@mail.ru";
+	  addr.bday = "1";
+	  addr.bmonth = "January";
+	  addr.byear = "1980";
+	  addr.groupdate = "group1";
+	  addr.address2 = "address";
+	  addr.phone2 = "phone2";
+
+      fillFormAddress(addr);
+      submitForm();
+      returnPage("home page");
   }
+  
+  
+  
+  
 
   @Test
   public void testEmptyPhoneCreation() throws Exception {
-	    driver.get(baseUrl + "/");
+    driver.get(baseUrl + "/");
 		  openMainPage();
 	      gotoPage("add new");
-	      newGropCreation();
-	      fillGropForm(new GroupDate(" ", " ", " "));
-	      submitGroupForm();
-	      returnGroupPage();
+	      fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "));
+	      submitForm();
+	      returnPage("home page");
 	  }
 }

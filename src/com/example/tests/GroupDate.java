@@ -15,3 +15,5 @@ public class GroupDate {
 		this.footer = footer;
 	}
 }
+
+
