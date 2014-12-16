@@ -11,23 +11,26 @@ import org.testng.Assert;
 
 public class ApplicationManager {
 	
+
 	//protected ApplicationManager app;
 	public WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 	
-	public NavigationHelper navigationhelper;
-    public GroupHelper grouphelper;
-    public AddressHelper adresshelper;
+	
+    private GroupHelper grouphelper;
+    private AddressHelper adresshelper;
+	private NavigationHelper navigationhelper;
     	
 	public ApplicationManager(){
 		 driver = new FirefoxDriver();
 		 baseUrl = "http://localhost:8081/";
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
-		 navigationhelper = new NavigationHelper(this);
-		 adresshelper = new AddressHelper(this);
-		 grouphelper = new GroupHelper(this);
+//       Нинициализация  	
+//		 navigationhelper = new NavigationHelper(this); 
+//		 adresshelper = new AddressHelper(this);
+//		 grouphelper = new GroupHelper(this);
 	}
 	
 	
@@ -35,9 +38,34 @@ public class ApplicationManager {
 		   driver.quit();
 	
 	}
-	
-	
+// лк	
+	public NavigationHelper getNavigationHelper() {
+	if (navigationhelper == null) 
+	{	
+		navigationhelper = new NavigationHelper(this);
+	}
+	return 	navigationhelper;
 
+	}
+	
+	public GroupHelper getGroupHelper() {
+		if (grouphelper == null) 
+		{	
+			grouphelper = new GroupHelper(this);
+		}
+		return 	grouphelper;
+
+		}
+
+	
+	public AddressHelper getAddressHelper() {
+	if (adresshelper == null) 
+	{	
+		adresshelper = new AddressHelper(this);
+	}
+	return 	adresshelper;
+
+	}
 	
 
 }
