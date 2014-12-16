@@ -8,6 +8,7 @@
           <include name="testNonEmptyPhoneCreation"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testEmptyPhoneCreation"/>
         </methods>
       </class> <!-- com.example.tests.AdressCreateTest -->
       <class name="com.example.tests.GroupeCreationTests">

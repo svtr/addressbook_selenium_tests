@@ -9,9 +9,9 @@ public class AdressCreateTest extends TestBase{
   @Test
   public void testNonEmptyPhoneCreation() throws Exception {
     
-	  app.GetUrl();
-	  app.openMainPage();
-      app.gotoPage("add new");
+	  app.navigationhelper.GetUrl(app);
+	  app.navigationhelper.openMainPage();
+      app.navigationhelper.gotoPage("add new");
       AddressDate addr = new AddressDate();
       addr.fname = "Ivan";
 	  addr.lastname = "Ivanov";
@@ -28,9 +28,9 @@ public class AdressCreateTest extends TestBase{
 	  addr.address2 = "address";
 	  addr.phone2 = "phone2";
 
-      app.fillFormAddress(this, addr);
-      app.submitForm();
-      app.returnPage("home page");
+      app.adresshelper.fillFormAddress(addr);
+      app.navigationhelper.submitForm();
+      app.navigationhelper.returnPage("home page");
   }
   
   
@@ -39,11 +39,11 @@ public class AdressCreateTest extends TestBase{
 
   @Test
   public void testEmptyPhoneCreation() throws Exception {
-	      app.GetUrl();
-		  app.openMainPage();
-	      app.gotoPage("add new");
-	      app.fillFormAddress(this, new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "));
-	      app.submitForm();
-	      app.returnPage("home page");
+	      app.navigationhelper.GetUrl(app);
+		  app.navigationhelper.openMainPage();
+		  app.navigationhelper.gotoPage("add new");
+	      app.adresshelper.fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "));
+	      app.navigationhelper.submitForm();
+	      app.navigationhelper.returnPage("home page");
 	  }
 }

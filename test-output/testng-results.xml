@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21055" started-at="2014-12-16T11:45:44Z" finished-at="2014-12-16T11:46:05Z">
+  <suite name="Default suite" duration-ms="25680" started-at="2014-12-16T13:14:11Z" finished-at="2014-12-16T13:14:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21055" started-at="2014-12-16T11:45:44Z" finished-at="2014-12-16T11:46:05Z">
+    <test name="Default test" duration-ms="25680" started-at="2014-12-16T13:14:11Z" finished-at="2014-12-16T13:14:36Z">
       <class name="com.example.tests.GroupeCreationTests">
-        <test-method status="PASS" signature="testEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupeCreationTests@3ecf72fd]" name="testEmptyGroupCreation" duration-ms="2345" started-at="2014-12-16T14:46:00Z" finished-at="2014-12-16T14:46:02Z">
+        <test-method status="PASS" signature="testEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupeCreationTests@77f03bb1]" name="testEmptyGroupCreation" duration-ms="2145" started-at="2014-12-16T16:14:31Z" finished-at="2014-12-16T16:14:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptyGroupCreation -->
-        <test-method status="PASS" signature="testNonEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupeCreationTests@3ecf72fd]" name="testNonEmptyGroupCreation" duration-ms="1997" started-at="2014-12-16T14:46:02Z" finished-at="2014-12-16T14:46:04Z">
+        <test-method status="PASS" signature="testNonEmptyGroupCreation()[pri:0, instance:com.example.tests.GroupeCreationTests@77f03bb1]" name="testNonEmptyGroupCreation" duration-ms="2564" started-at="2014-12-16T16:14:33Z" finished-at="2014-12-16T16:14:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNonEmptyGroupCreation -->
       </class> <!-- com.example.tests.GroupeCreationTests -->
       <class name="com.example.tests.AdressCreateTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AdressCreateTest@22a71081]" name="setUp" is-config="true" duration-ms="8619" started-at="2014-12-16T14:45:44Z" finished-at="2014-12-16T14:45:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AdressCreateTest@1ff8b8f]" name="setUp" is-config="true" duration-ms="8590" started-at="2014-12-16T16:14:11Z" finished-at="2014-12-16T16:14:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testEmptyPhoneCreation()[pri:0, instance:com.example.tests.AdressCreateTest@22a71081]" name="testEmptyPhoneCreation" duration-ms="4520" started-at="2014-12-16T14:45:52Z" finished-at="2014-12-16T14:45:57Z">
+        <test-method status="PASS" signature="testEmptyPhoneCreation()[pri:0, instance:com.example.tests.AdressCreateTest@1ff8b8f]" name="testEmptyPhoneCreation" duration-ms="4743" started-at="2014-12-16T16:14:19Z" finished-at="2014-12-16T16:14:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptyPhoneCreation -->
-        <test-method status="PASS" signature="testNonEmptyPhoneCreation()[pri:0, instance:com.example.tests.AdressCreateTest@22a71081]" name="testNonEmptyPhoneCreation" duration-ms="3208" started-at="2014-12-16T14:45:57Z" finished-at="2014-12-16T14:46:00Z">
+        <test-method status="PASS" signature="testNonEmptyPhoneCreation()[pri:0, instance:com.example.tests.AdressCreateTest@1ff8b8f]" name="testNonEmptyPhoneCreation" duration-ms="7367" started-at="2014-12-16T16:14:24Z" finished-at="2014-12-16T16:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNonEmptyPhoneCreation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AdressCreateTest@22a71081]" name="tearDown" is-config="true" duration-ms="344" started-at="2014-12-16T14:46:04Z" finished-at="2014-12-16T14:46:05Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AdressCreateTest@1ff8b8f]" name="tearDown" is-config="true" duration-ms="246" started-at="2014-12-16T16:14:36Z" finished-at="2014-12-16T16:14:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
