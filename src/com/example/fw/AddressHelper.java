@@ -13,28 +13,54 @@ public class AddressHelper extends HelperBase{
 		}
 
 	public void fillFormAddress(AddressDate addr) { 
-		
+		if  (addr.fname != null)
+	    { 		
 		type(By.name("firstname"), addr.fname);
+	    }
+		if  (addr.lastname != null)
+	    { 		
 		type(By.name("lastname"), addr.lastname);
+	    }
+		if  (addr.address != null)
+	    { 		
 		type(By.name("address"), addr.address);
+	    }
+		if  (addr.home != null)
+	    { 		
 		type(By.name("home"), addr.home);
+	    }
+		if  (addr.mobile != null)
+	    { 		
 		type(By.name("mobile"), addr.mobile);
+	    }
+		if  (addr.work != null)
+	    { 		
+		
 		type(By.name("work"), addr.work);
+	    }
+		if  (addr.email != null)
+	    { 		
+		
 		type(By.name("email"), addr.email);
+	    }
+		if  (addr.email2 != null)
+	    { 		
 		type(By.name("email2"), addr.email2);
-
+	    }
 	    //Select sel = new Select(manager.driver.findElement(By.name("bday")));
 	  
-		if  (addr.bday != " ")
+		if  (addr.bday != null)
 	    { 		
-	   
-		selectByText(addr.bday, By.name("bday"));
+			if  (addr.bday != " ") {
+		      selectByText(addr.bday, By.name("bday"));
+	     	}
 	    }
 	   
-	    if (addr.bmonth != " ")
+	    if (addr.bmonth != null)
 	    {	
-    	selectByText(addr.bmonth, By.name("bmonth"));	
-
+	    	if  (addr.bmonth != " ") {
+    	        selectByText(addr.bmonth, By.name("bmonth"));	
+	    	} 
 	    }   
 	  
 	    type(By.name("byear"), addr.byear);
@@ -43,12 +69,36 @@ public class AddressHelper extends HelperBase{
 	//	    {
 	    // type(By.name("new_group"), addr.group); 
 	    //}
+	    if (addr.address2 != " ")
+	    {	
 	    type(By.name("address2"), addr.address2);
+	    }
+	    if (addr.phone2 != " ")
+	    {	
 	    type(By.name("phone2"), addr.phone2);
-	   
+	    }
 	
 	
 	}
 
+	
+	
+	public void deleteAddress(int index) {
+		//selectAddressByIndex(index);
+		//click(By.xpath("//input[@name=''maintable']/tbody/tr["+index+"]/td[7]"));
+		click(By.xpath(".//*[@id='maintable']/tbody/tr["+index+"]/td[7]/a/img"));
+		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
+		
+	}
+
+	public void initmodifyaddress(int index) {
+		click(By.xpath(".//*[@id='maintable']/tbody/tr["+index+"]/td[7]/a/img"));
+		
+	}
+
+	public void updateGroupForm() {
+		click(By.xpath(".//*[@id='content']/form[1]/input[11]"));
+		
+	}
 
 }
