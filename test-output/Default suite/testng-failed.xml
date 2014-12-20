@@ -3,20 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.AdressCreateTest">
+      <class name="com.example.tests.GroupeRemoveTest">
         <methods>
-          <include name="testNonEmptyPhoneCreation"/>
           <include name="setUp"/>
+          <include name="deleteGroup"/>
           <include name="tearDown"/>
-          <include name="testEmptyPhoneCreation"/>
         </methods>
-      </class> <!-- com.example.tests.AdressCreateTest -->
-      <class name="com.example.tests.GroupeCreationTests">
-        <methods>
-          <include name="testNonEmptyGroupCreation"/>
-          <include name="testEmptyGroupCreation"/>
-        </methods>
-      </class> <!-- com.example.tests.GroupeCreationTests -->
+      </class> <!-- com.example.tests.GroupeRemoveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

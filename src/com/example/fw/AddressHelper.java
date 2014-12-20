@@ -14,47 +14,41 @@ public class AddressHelper extends HelperBase{
 
 	public void fillFormAddress(AddressDate addr) { 
 		
-		
-	    driver.findElement(By.name("firstname")).clear();
-	    driver.findElement(By.name("firstname")).sendKeys(addr.fname);
-	    driver.findElement(By.name("lastname")).clear();
-	    driver.findElement(By.name("lastname")).sendKeys(addr.lastname);
-	    driver.findElement(By.name("address")).clear();
-	    driver.findElement(By.name("address")).sendKeys(addr.address);
-	    driver.findElement(By.name("home")).clear();
-	    driver.findElement(By.name("home")).sendKeys(addr.home);
-	    driver.findElement(By.name("mobile")).clear();
-	    driver.findElement(By.name("mobile")).sendKeys(addr.mobile);
-	    driver.findElement(By.name("work")).clear();
-	    driver.findElement(By.name("work")).sendKeys(addr.work);
-	    driver.findElement(By.name("email")).clear();
-	    driver.findElement(By.name("email")).sendKeys(addr.email);
-	    driver.findElement(By.name("email2")).clear();
-	    driver.findElement(By.name("email2")).sendKeys(addr.email2);
+		type(By.name("firstname"), addr.fname);
+		type(By.name("lastname"), addr.lastname);
+		type(By.name("address"), addr.address);
+		type(By.name("home"), addr.home);
+		type(By.name("mobile"), addr.mobile);
+		type(By.name("work"), addr.work);
+		type(By.name("email"), addr.email);
+		type(By.name("email2"), addr.email2);
+
 	    //Select sel = new Select(manager.driver.findElement(By.name("bday")));
-	    if  (addr.bday != " ")
+	  
+		if  (addr.bday != " ")
 	    { 		
-	    new Select(driver.findElement(By.name("bday"))).selectByVisibleText(addr.bday);
+	   
+		selectByText(addr.bday, By.name("bday"));
 	    }
 	   
 	    if (addr.bmonth != " ")
 	    {	
-	    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(addr.bmonth);
+    	selectByText(addr.bmonth, By.name("bmonth"));	
+
 	    }   
 	  
-	    driver.findElement(By.name("byear")).clear();
-	    driver.findElement(By.name("byear")).sendKeys(addr.byear);
+	    type(By.name("byear"), addr.byear);
+
 	//	    if (addr.group != " ")
 	//	    {
-	    //new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(addr.group);
+	    // type(By.name("new_group"), addr.group); 
 	    //}
-	    
-	    driver.findElement(By.name("address2")).clear();
-	    driver.findElement(By.name("address2")).sendKeys(addr.address2);
-	    driver.findElement(By.name("phone2")).clear();
-	    driver.findElement(By.name("phone2")).sendKeys(addr.phone2);
+	    type(By.name("address2"), addr.address2);
+	    type(By.name("phone2"), addr.phone2);
+	   
 	
 	
 	}
+
 
 }

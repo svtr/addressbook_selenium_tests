@@ -25,7 +25,7 @@ public class ApplicationManager {
     	
 	public ApplicationManager(){
 		 driver = new FirefoxDriver();
-		 baseUrl = "http://localhost:8081/";
+		 baseUrl = "http://localhost/";
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 //       Нинициализация  	
 //		 navigationhelper = new NavigationHelper(this); 
