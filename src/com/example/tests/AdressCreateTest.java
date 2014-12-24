@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 
 
-
 public class AdressCreateTest extends TestBase{
   @Test
   public void testNonEmptyPhoneCreation() throws Exception {
@@ -42,6 +41,7 @@ public class AdressCreateTest extends TestBase{
 	      app.getNavigationHelper().GetUrl(app);
 		  app.getNavigationHelper().openMainPage();
 		  app.getNavigationHelper().gotoPage("add new");
+		  
 	      app.getAddressHelper().fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "));
 	      app.getNavigationHelper().submitForm();
 	      app.getNavigationHelper().returnPage("home page");

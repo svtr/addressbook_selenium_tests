@@ -2,6 +2,7 @@ package com.example.tests;
 
 import org.testng.annotations.Test;
 
+
 public class AddressModifyTest extends TestBase{
 
 	@Test	
@@ -10,11 +11,12 @@ public class AddressModifyTest extends TestBase{
     app.getNavigationHelper().GetUrl(app);
 	app.getNavigationHelper().openMainPage();
 	app.getAddressHelper().initmodifyaddress(8);
-	AddressDate address = new AddressDate();
-	address.fname = "new name";
-	app.getAddressHelper().fillFormAddress(address);
+	AddressDate addr = new AddressDate();
+	addr.fname = "new name";
+	app.getAddressHelper().fillFormAddress(addr);
     app.getAddressHelper().updateGroupForm();	
 	app.getNavigationHelper().returnPage("home page");
+	
 
 	}
 	

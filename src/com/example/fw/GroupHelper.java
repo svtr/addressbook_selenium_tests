@@ -1,6 +1,11 @@
 package com.example.fw;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.example.tests.GroupDate;
 //import com.example.tests.TestBase;
@@ -29,7 +34,7 @@ public class GroupHelper extends HelperBase {
 	}
 
 	private void selectGroupeByIndex(int index) {
-		click(By.xpath("//input[@name='selected[]']["+index+"]"));
+		click(By.xpath("//input[@name='selected[]']["+(index+1)+"]"));
 	}
 
 	public void initmodifygroupe(int index) {
@@ -41,6 +46,19 @@ public class GroupHelper extends HelperBase {
 	public void submitGroupFirm() {
 		click(By.name("update"));
 		
+	}
+
+	public List<GroupDate> GetGroups() {
+		List<GroupDate> groups = new ArrayList<GroupDate>();
+		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
+		for (WebElement checkbox : checkboxes) {
+			GroupDate group = new GroupDate();
+			String title = checkbox.getAttribute("title");
+			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
+			groups.add(group);
+			
+		}
+		return groups;
 	}
 
 

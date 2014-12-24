@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 //import com.example.tests.TestBase;
 
@@ -16,7 +16,7 @@ public class ApplicationManager {
 	public WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
-	private StringBuffer verificationErrors = new StringBuffer();
+	
 	
 	
     private GroupHelper grouphelper;
@@ -25,7 +25,7 @@ public class ApplicationManager {
     	
 	public ApplicationManager(){
 		 driver = new FirefoxDriver();
-		 baseUrl = "http://localhost/";
+		 baseUrl = "http://localhost:8081";
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 //       Нинициализация  	
 //		 navigationhelper = new NavigationHelper(this); 
