@@ -1,5 +1,8 @@
 package com.example.tests;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.Collections;
 import java.util.List;
 
 import org.testng.annotations.Test;
@@ -7,6 +10,7 @@ import org.testng.annotations.Test;
 
 
 public class AdressCreateTest extends TestBase{
+ 
   @Test(dataProvider = "randomValidAddressGenerator")
   public void testAddressCreationwithValidData(AddressDate address) throws Exception {
     
@@ -17,7 +21,7 @@ public class AdressCreateTest extends TestBase{
 	  List<AddressDate> oldList = app.getAddressHelper().GetAddress();
 	  
       app.getNavigationHelper().gotoPage("add new");
-      AddressDate addr = new AddressDate();
+     // AddressDate addr = new AddressDate();
       //addr.fname = "Ivan";
       //addr.lastname = "Ivanov";
 	  //addr.address = "Spb";
@@ -33,20 +37,23 @@ public class AdressCreateTest extends TestBase{
 	  //addr.address2 = "address";
 	  //addr.phone2 = "phone2";
 
-      app.getAddressHelper().fillFormAddress(addr);
+      app.getAddressHelper().fillFormAddress(address);
       app.getNavigationHelper().submitForm();
       app.getNavigationHelper().returnPage("home page");
-      
+            
       //save new list
-      List<AddressDate> newList = app.getAddressHelper().GetAddress();
-      
+       List<AddressDate> newList = app.getAddressHelper().GetAddress();
+       oldList.add(address);
+       Collections.sort(oldList);
+       Collections.sort(newList);  
+       assertEquals(newList, oldList);
   }
   
   
   
   
 
-  @Test
+ // @Test
   public void testEmptyPhoneCreation() throws Exception {
 	      app.getNavigationHelper().GetUrl(app);
 		  app.getNavigationHelper().openMainPage();

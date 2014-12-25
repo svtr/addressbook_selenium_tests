@@ -35,9 +35,6 @@ public class AddressDate implements Comparable<AddressDate> {
 		this.bday = bday;
 		this.bmonth = bmonth;
 		this.byear = byear;
-		this.byear = byear;
-		this.bmonth = bmonth;
-		this.byear = byear;
 		this.groupdate = groupdate;
 		this.address2 = address2;
 		this.phone2 = phone2;

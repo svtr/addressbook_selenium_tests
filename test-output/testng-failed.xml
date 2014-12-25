@@ -6,7 +6,7 @@
       <class name="com.example.tests.AdressCreateTest">
         <methods>
           <include name="setUp"/>
-          <include name="testAddressCreationwithValidData" invocation-numbers="0 1 2 3 4"/>
+          <include name="testAddressCreationwithValidData" invocation-numbers="0 1"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.example.tests.AdressCreateTest -->

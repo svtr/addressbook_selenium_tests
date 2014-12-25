@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 25 11:07:37 FET 2014</td>
+<td>Started on:</td><td>Thu Dec 25 15:06:55 FET 2014</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20802 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19164 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname=test-371018593, lastname=test-1521803161, address=test-1172400730, home=test1643401811, mobile=test342086524, work= , email=test1706027240, email2=test869822161, bday=null, bmonth=null, byear=null, groupdate=null, address2=test432865152, phone2=test892844890]</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
+<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname=test882833597, lastname=test59885026, address=test-695962515, home=test-447704925, mobile=test-1436612672, work=test-424119630, email=test-220333039, email2=test713023424, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test333685162, phone2=test-1552370259]</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [28]: AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,73 +107,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2045036434", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2045036434'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>1</td>
-<td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
-<tr>
-<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname= , lastname=test603211368, address=test162881811, home=test-975621439, mobile=test-1744882681, work=test1983960504, email=test419465675, email2= , bday=null, bmonth=null, byear=null, groupdate=null, address2= , phone2=test-386622879]</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1926004335", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1926004335'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1823541245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1823541245'><pre>java.lang.AssertionError: Lists differ at element [28]: AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -196,14 +140,17 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>1</td>
+<td>5</td>
 <td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
 <tr>
-<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname=test-678093792, lastname= , address=test-74771888, home=test-958388052, mobile=test161110853, work=test-946320239, email= , email2=test626546541, bday=null, bmonth=null, byear=null, groupdate=null, address2= , phone2= ]</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
+<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname= , lastname=test-466624878, address=test-1651473879, home=test27277766, mobile=test1451355947, work=test2082505818, email=test798327903, email2=test-1701649297, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test1905261381, phone2=test-1039847702]</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [21]: AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -228,11 +175,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace443934570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace443934570'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1954985045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1954985045'><pre>java.lang.AssertionError: Lists differ at element [21]: AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -258,144 +208,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>0</td>
-<td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
-<tr>
-<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname= , lastname= , address= , home= , mobile= , work=test1718971897, email=test1054768246, email2=test-954415148, bday=null, bmonth=null, byear=null, groupdate=null, address2= , phone2= ]</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2095486832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2095486832'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
-<tr>
-<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [fname=test-742789923, lastname=test937862639, address= , home= , mobile= , work=test-569059972, email=test1127799800, email2= , bday=null, bmonth=null, byear=null, groupdate=null, address2=test-1170594467, phone2= ]</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace725680028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace725680028'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: -9
-	at java.lang.String.substring(Unknown Source)
-	at com.example.fw.AddressHelper.GetAddress(AddressHelper.java:101)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.example.tests.AdressCreateTest.testEmptyPhoneCreation()'><b>testEmptyPhoneCreation</b><br>Test class: com.example.tests.AdressCreateTest</td>
-<td></td>
-<td>4</td>
+<td>5</td>
 <td>com.example.tests.AdressCreateTest@2d6d8735</td></tr>
 </table><p>
 </body>

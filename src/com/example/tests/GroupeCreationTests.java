@@ -19,7 +19,7 @@ public class GroupeCreationTests extends TestBase{
       //save old
       List<GroupDate> oldList = app.getGroupHelper().GetGroups();
    
-      app.getGroupHelper().newGropCreation();
+      app.getGroupHelper().newGroupCreation();
 //      не нужно так как добавлен public Iterator<Object[]> randomValidGroupGenerator(){
 //      GroupDate group = new GroupDate();
 //      group.groupname = "groupe name 1";

@@ -71,6 +71,10 @@ public class AddressHelper extends HelperBase {
 
 	}
 
+	public void newAddressCreation() {
+		click(By.name("add new"));
+	}
+	
 	public void deleteAddress(int index) {
 		// selectAddressByIndex(index);
 		// click(By.xpath("//input[@name=''maintable']/tbody/tr["+index+"]/td[7]"));
@@ -95,14 +99,29 @@ public class AddressHelper extends HelperBase {
 
 		    List<AddressDate> addrs = new ArrayList<AddressDate>();
 			List<WebElement> checkboxes = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr/td[2]"));
-			for (WebElement checkbox : checkboxes) {
+//			for (int i = 0; i<(max-1); i ++) {
+//			for (WebElement checkbox : (max-1)) {
+			for (WebElement td : checkboxes) {
 				AddressDate addr = new AddressDate();
-				String title = checkbox.getAttribute("title");
-				addr.lastname =   title.substring("Select (".length(), title.length() - ")".length());
-//				addr.groupname =  replaceNull(group.groupname);
-//				addr.header =  replaceNull(group.header);
-//				addr.footer =  replaceNull(group.footer);
-//				addr.add(addr);
+				String text = td.getText();
+				text = replaceNull(text);
+				addr.lastname =   text;
+				addr.fname = replaceNull(addr.fname);
+				addr.address = replaceNull(addr.email);
+				addr.home = replaceNull(addr.email);
+				addr.mobile = replaceNull(addr.email);
+				addr.work = replaceNull(addr.email);
+				addr.email = replaceNull(addr.email);
+				addr.email2 = replaceNull(addr.email2);
+				addr.bday = replaceNull(addr.bday);
+				addr.bmonth = replaceNull(addr.bmonth);
+				addr.byear = replaceNull(addr.byear);
+				addr.bmonth = replaceNull(addr.bmonth);
+				addr.byear = replaceNull(addr.byear);
+				addr.groupdate = replaceNull(addr.groupdate);
+				addr.address2 = replaceNull(addr.address2);
+				addr.phone2 = replaceNull(addr.phone2);
+				addrs.add(addr);
 				
 			}
 			return addrs;

@@ -23,7 +23,7 @@ public class GroupHelper extends HelperBase {
 	    	 
 	}
 
-	public void newGropCreation() {
+	public void newGroupCreation() {
 		click(By.name("new"));
 	}
 
