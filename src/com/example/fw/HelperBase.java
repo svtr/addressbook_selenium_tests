@@ -75,4 +75,10 @@ public abstract  class HelperBase {
 	}
 
     
+	
+	
+	public static String replaceNull(String input) {
+		  return input == null ? "" : input;
+		}
+
 }

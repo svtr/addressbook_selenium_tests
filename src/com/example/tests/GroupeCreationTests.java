@@ -1,19 +1,10 @@
 package com.example.tests;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
 
-
+import org.testng.annotations.Test;
 import java.util.Collections;
-
 import java.util.List;
-
-
 import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.Test;
 
 
 public class GroupeCreationTests extends TestBase{
@@ -29,7 +20,7 @@ public class GroupeCreationTests extends TestBase{
       List<GroupDate> oldList = app.getGroupHelper().GetGroups();
    
       app.getGroupHelper().newGropCreation();
-// не нужно так как добавлен public Iterator<Object[]> randomValidGroupGenerator(){
+//      не нужно так как добавлен public Iterator<Object[]> randomValidGroupGenerator(){
 //      GroupDate group = new GroupDate();
 //      group.groupname = "groupe name 1";
 //      group.header = "groupe header 1";

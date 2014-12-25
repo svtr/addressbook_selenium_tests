@@ -43,7 +43,7 @@ public class GroupHelper extends HelperBase {
 		
 	}
 
-	public void submitGroupFirm() {
+	public void submitGroupForm() {
 		click(By.name("update"));
 		
 	}
@@ -55,6 +55,9 @@ public class GroupHelper extends HelperBase {
 			GroupDate group = new GroupDate();
 			String title = checkbox.getAttribute("title");
 			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
+			group.groupname =  replaceNull(group.groupname);
+			group.header =  replaceNull(group.header);
+			group.footer =  replaceNull(group.footer);
 			groups.add(group);
 			
 		}

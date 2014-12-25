@@ -53,10 +53,47 @@ public class TestBase {
 		
 	}
 	
+	
 	//....
 	return list.iterator();
 		
 	}
+	
+	
+	
+	@DataProvider
+	public Iterator<Object[]> randomValidAddressGenerator(){
+		
+	List<Object[]> list =  new ArrayList<Object[]>();
+	
+	for (int i = 0; i<5; i++)
+	{
+		AddressDate addr = new AddressDate();
+		
+		addr.fname =  generateRandomString();
+	    addr.lastname =  generateRandomString();
+		addr.address =  generateRandomString();
+	    addr.home =  generateRandomString();
+		addr.mobile =  generateRandomString();
+		addr.work =  generateRandomString();
+		addr.email =  generateRandomString();
+		addr.email2 =  generateRandomString();
+		//addr.bday = "1";
+		//addr.bmonth = "January";
+		//addr.byear = "1980";
+		//addr.groupdate = "group1";
+		 addr.address2 =  generateRandomString();
+		 addr.phone2 =  generateRandomString();
+         list.add(new Object[]{addr});
+		
+	}
+	
+	
+	//....
+	return list.iterator();
+		
+	}
+	
 	
 	
 	
