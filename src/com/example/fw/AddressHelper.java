@@ -79,19 +79,19 @@ public class AddressHelper extends HelperBase {
 	public void deleteAddress(int index) {
 		// selectAddressByIndex(index);
 		// click(By.xpath("//input[@name=''maintable']/tbody/tr["+index+"]/td[7]"));
-		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + index
+		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+1)
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
 
 	}
 
 	public void initmodifyaddress(int index) {
-		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + index
+		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+1)
 				+ "]/td[7]/a/img"));
 
 	}
 
-	public void updateGroupForm() {
+	public void updateAddressForm() {
 		click(By.xpath(".//*[@id='content']/form[1]/input[11]"));
 
 	}

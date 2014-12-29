@@ -44,9 +44,6 @@ public class AddressDate implements Comparable<AddressDate> {
 	}
 
 
-
-
-
 	
 
 	@Override

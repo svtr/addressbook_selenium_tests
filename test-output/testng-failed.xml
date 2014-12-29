@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.AdressCreateTest">
+      <class name="com.example.tests.AddressRemoveTest">
         <methods>
           <include name="setUp"/>
-          <include name="testAddressCreationwithValidData" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="deleteAddress" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.example.tests.AdressCreateTest -->
+      </class> <!-- com.example.tests.AddressRemoveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
