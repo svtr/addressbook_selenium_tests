@@ -29,4 +29,5 @@ public class NavigationHelper  extends HelperBase{
 		applicationManager.driver.get(applicationManager.baseUrl + "/");
 	}
 
+	
 }

@@ -21,6 +21,7 @@ public class AdressCreateTest extends TestBase{
 	  List<AddressDate> oldList = app.getAddressHelper().GetAddress();
 	  
       app.getNavigationHelper().gotoPage("add new");
+      
      // AddressDate addr = new AddressDate();
       //addr.fname = "Ivan";
       //addr.lastname = "Ivanov";
@@ -36,16 +37,14 @@ public class AdressCreateTest extends TestBase{
 	  //addr.groupdate = "group1";
 	  //addr.address2 = "address";
 	  //addr.phone2 = "phone2";
-
       app.getAddressHelper().fillFormAddress(address);
       app.getNavigationHelper().submitForm();
       app.getNavigationHelper().returnPage("home page");
-            
+      oldList.add(address);      
       //save new list
        List<AddressDate> newList = app.getAddressHelper().GetAddress();
-       oldList.add(address);
-       Collections.sort(oldList);
-       Collections.sort(newList);  
+       Collections.sort(newList);
+       Collections.sort(oldList);  
        assertEquals(newList, oldList);
   }
   

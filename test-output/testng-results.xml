@@ -1,117 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19164" started-at="2014-12-25T12:06:55Z" finished-at="2014-12-25T12:07:14Z">
+  <suite name="Default suite" duration-ms="16981" started-at="2014-12-29T12:22:39Z" finished-at="2014-12-29T12:22:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19164" started-at="2014-12-25T12:06:55Z" finished-at="2014-12-25T12:07:14Z">
+    <test name="Default test" duration-ms="16981" started-at="2014-12-29T12:22:39Z" finished-at="2014-12-29T12:22:55Z">
       <class name="com.example.tests.AdressCreateTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="setUp" is-config="true" duration-ms="7766" started-at="2014-12-25T15:06:55Z" finished-at="2014-12-25T15:07:03Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="setUp" is-config="true" duration-ms="10840" started-at="2014-12-29T15:22:39Z" finished-at="2014-12-29T15:22:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="5838" started-at="2014-12-25T15:07:03Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-25T15:07:09Z">
+        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="5738" started-at="2014-12-29T15:22:49Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-29T15:22:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [fname=test882833597, lastname=test59885026, address=test-695962515, home=test-447704925, mobile=test-1436612672, work=test-424119630, email=test-220333039, email2=test713023424, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test333685162, phone2=test-1552370259]]]>
+                <![CDATA[AddressDate [lastname=test283824787,fname= ,  address= , home= , mobile=test-2060343597, work= , email=test-1072638951, email2=test1079757649, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1259732808, phone2=test-1602859359]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Lists differ at element [28]: AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Lists differ at element [28]: AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test844451170, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test59885026, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="FAIL" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="5311" started-at="2014-12-25T15:07:09Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-25T15:07:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AddressDate [fname= , lastname=test-466624878, address=test-1651473879, home=test27277766, mobile=test1451355947, work=test2082505818, email=test798327903, email2=test-1701649297, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test1905261381, phone2=test-1039847702]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Lists differ at element [21]: AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Lists differ at element [21]: AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] != AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=] expected [AddressDate [fname=, lastname=test1141668914, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]] but found [AddressDate [fname=, lastname=test-466624878, address=, home=, mobile=, work=, email=, email2=, bday=, bmonth=, byear=, groupdate=, address2=, phone2=]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:549)
-	at org.testng.Assert.assertEquals(Assert.java:514)
-	at com.example.tests.AdressCreateTest.testAddressCreationwithValidData(AdressCreateTest.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="tearDown" is-config="true" duration-ms="234" started-at="2014-12-25T15:07:14Z" finished-at="2014-12-25T15:07:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="tearDown" is-config="true" duration-ms="387" started-at="2014-12-29T15:22:55Z" finished-at="2014-12-29T15:22:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

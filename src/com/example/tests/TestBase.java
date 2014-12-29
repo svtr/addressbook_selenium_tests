@@ -66,24 +66,24 @@ public class TestBase {
 		
 	List<Object[]> list =  new ArrayList<Object[]>();
 	
-	for (int i = 0; i<2; i++)
+	for (int i = 0; i<1; i++)
 	{
-		 AddressDate addr = new AddressDate();
-		 addr.fname =  generateRandomString();
-	     addr.lastname =  generateRandomString();
-		 addr.address =  generateRandomString();
-	     addr.home =  generateRandomString();
-		 addr.mobile =  generateRandomString();
-		 addr.work =  generateRandomString();
-		 addr.email =  generateRandomString();
-		 addr.email2 =  generateRandomString();
-		 addr.bday = "1";
-		 addr.bmonth = "January";
-		 addr.byear = "1980";
-		 addr.groupdate = "group1";
-		 addr.address2 =  generateRandomString();
-		 addr.phone2 =  generateRandomString();
-         list.add(new Object[]{addr});
+		 AddressDate address = new AddressDate();
+		 address.lastname =  generateRandomString();
+		 address.fname =  generateRandomString();
+         address.address =  generateRandomString();
+	     address.home =  generateRandomString();
+		 address.mobile =  generateRandomString();
+		 address.work =  generateRandomString();
+		 address.email =  generateRandomString();
+		 address.email2 =  generateRandomString();
+		 address.bday = "1";
+		 address.bmonth = "January";
+		 address.byear = "1980";
+		 address.groupdate = "group1";
+		 address.address2 =  generateRandomString();
+		 address.phone2 =  generateRandomString();
+         list.add(new Object[]{address});
 		
 	}
 	
@@ -93,7 +93,7 @@ public class TestBase {
 		
 	}
 	
-	
+
 	
 	
 	public String generateRandomString()

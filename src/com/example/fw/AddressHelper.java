@@ -2,12 +2,13 @@ package com.example.fw;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.example.tests.AddressDate;
-import com.example.tests.GroupDate;
+
 
 public class AddressHelper extends HelperBase {
 
@@ -94,39 +95,50 @@ public class AddressHelper extends HelperBase {
 		click(By.xpath(".//*[@id='content']/form[1]/input[11]"));
 
 	}
-
+	
+	public void selectDay(){
+	
+	}
+	
+	public void selectMonth(){
+		
+	}
+	
+    public void selectGroup(){
+		
+	}
+	
 	public List<AddressDate> GetAddress() {
 
 		    List<AddressDate> addrs = new ArrayList<AddressDate>();
 			List<WebElement> checkboxes = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr/td[2]"));
-//			for (int i = 0; i<(max-1); i ++) {
-//			for (WebElement checkbox : (max-1)) {
 			for (WebElement td : checkboxes) {
-				AddressDate addr = new AddressDate();
+				AddressDate address = new AddressDate();
 				String text = td.getText();
 				text = replaceNull(text);
-				addr.lastname =   text;
-				addr.fname = replaceNull(addr.fname);
-				addr.address = replaceNull(addr.email);
-				addr.home = replaceNull(addr.email);
-				addr.mobile = replaceNull(addr.email);
-				addr.work = replaceNull(addr.email);
-				addr.email = replaceNull(addr.email);
-				addr.email2 = replaceNull(addr.email2);
-				addr.bday = replaceNull(addr.bday);
-				addr.bmonth = replaceNull(addr.bmonth);
-				addr.byear = replaceNull(addr.byear);
-				addr.bmonth = replaceNull(addr.bmonth);
-				addr.byear = replaceNull(addr.byear);
-				addr.groupdate = replaceNull(addr.groupdate);
-				addr.address2 = replaceNull(addr.address2);
-				addr.phone2 = replaceNull(addr.phone2);
-				addrs.add(addr);
+				address.lastname =   text;
+				address.fname = replaceNull(address.fname);
+				address.address = replaceNull(address.address);
+				address.home = replaceNull(address.home);
+				address.mobile = replaceNull(address.mobile);
+				address.work = replaceNull(address.work);
+				address.email = replaceNull(address.email);
+				address.email2 = replaceNull(address.email2);
+				address.bday = replaceNull(address.bday);
+				address.bmonth = replaceNull(address.bmonth);
+				address.byear = replaceNull(address.byear);
+				address.groupdate = replaceNull(address.groupdate);
+				address.address2 = replaceNull(address.address2);
+				address.phone2 = replaceNull(address.phone2);
+				addrs.add(address);
 				
 			}
 			return addrs;
 		
 		
 	}
+	
+	
+
 
 }
