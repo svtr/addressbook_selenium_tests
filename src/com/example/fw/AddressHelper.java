@@ -77,16 +77,14 @@ public class AddressHelper extends HelperBase {
 	}
 	
 	public void deleteAddress(int index) {
-		// selectAddressByIndex(index);
-		// click(By.xpath("//input[@name=''maintable']/tbody/tr["+index+"]/td[7]"));
-		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+1)
+		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+2)
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
 
 	}
 
 	public void initmodifyaddress(int index) {
-		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+1)
+		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+2)
 				+ "]/td[7]/a/img"));
 
 	}
@@ -115,8 +113,7 @@ public class AddressHelper extends HelperBase {
 			for (WebElement td : checkboxes) {
 				AddressDate address = new AddressDate();
 				String text = td.getText();
-				text = replaceNull(text);
-				address.lastname =   text;
+     			address.lastname =   replaceNull(text);
 				address.fname = replaceNull(address.fname);
 				address.address = replaceNull(address.address);
 				address.home = replaceNull(address.home);
@@ -139,6 +136,5 @@ public class AddressHelper extends HelperBase {
 	}
 	
 	
-
 
 }

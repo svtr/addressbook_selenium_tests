@@ -48,10 +48,8 @@ public class AddressDate implements Comparable<AddressDate> {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		
-		return result;
+			int result = 1;
+			return result;
 	}
 
 	@Override
@@ -65,8 +63,13 @@ public class AddressDate implements Comparable<AddressDate> {
 		AddressDate other = (AddressDate) obj;
 		if (lastname == null) {
 			if (other.lastname != null)
-				return false;
-		} else if (!lastname.equals(other.lastname))
+		     return false;
+		}
+		if ( (lastname == " ")||(lastname.isEmpty())) {
+		      if (other.lastname.isEmpty()||(lastname == " "))
+		    	  return true;
+		}     
+		  else if (!lastname.equals(other.lastname))
 			return false;
 		return true;
 	}

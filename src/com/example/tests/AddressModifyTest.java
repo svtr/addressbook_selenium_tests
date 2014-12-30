@@ -20,7 +20,7 @@ public class AddressModifyTest extends TestBase{
 	 //save old list
 	List<AddressDate> oldList = app.getAddressHelper().GetAddress();
 	Random rnd = new Random();
-	int index = rnd.nextInt(oldList.size()-1);
+	int index = rnd.nextInt(oldList.size()-2);
 	  
 	app.getAddressHelper().initmodifyaddress(index);
 	app.getAddressHelper().fillFormAddress(address);

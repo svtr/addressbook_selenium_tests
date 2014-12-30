@@ -52,7 +52,7 @@ public class AdressCreateTest extends TestBase{
   
   
 
- // @Test
+  //@Test
   public void testEmptyPhoneCreation() throws Exception {
 	      app.getNavigationHelper().GetUrl(app);
 		  app.getNavigationHelper().openMainPage();

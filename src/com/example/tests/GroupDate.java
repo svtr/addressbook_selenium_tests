@@ -39,7 +39,7 @@ public class GroupDate implements Comparable<GroupDate>{
 			return false;
 		GroupDate other = (GroupDate) obj;
 		if (groupname == null) {
-			if (other.groupname != null)
+			if ((other.groupname != null)||(other.groupname != ""))
 				return false;
 		} else if (!groupname.equals(other.groupname))
 			return false;

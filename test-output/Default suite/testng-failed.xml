@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="deleteAddress" invocation-numbers="0"/>
+          <include name="deleteAddress" invocation-numbers="0 1 2 3 4"/>
         </methods>
       </class> <!-- com.example.tests.AddressRemoveTest -->
     </classes>

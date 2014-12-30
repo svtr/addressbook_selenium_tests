@@ -12,22 +12,20 @@ public class AddressRemoveTest extends TestBase{
 
 	
 	 @Test(dataProvider = "randomValidAddressGenerator")
-	public void deleteAddress(AddressDate address) {
+    	public void deleteAddress(AddressDate address) {
         
 		app.getNavigationHelper().GetUrl(app);
 		app.getNavigationHelper().openMainPage();
 		
 		List<AddressDate> oldList = app.getAddressHelper().GetAddress();
 		Random rnd = new Random();
-		int index = rnd.nextInt(oldList.size()-1);
+		int index = rnd.nextInt(oldList.size()-2);
 		
 		
 	    app.getAddressHelper().deleteAddress(index);
 	    app.getNavigationHelper().returnPage("home page");
-	    
 	    List<AddressDate>  newList= app.getAddressHelper().GetAddress();    
-  	    
-	    //	assertEquals(newlist.size(),oldList.size()-1);      
+    //	assertEquals(newlist.size(),oldList.size()-1);      
 	    oldList.remove(index);
 	    Collections.sort(oldList);
 	    Collections.sort(newList);
