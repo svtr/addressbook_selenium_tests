@@ -1,76 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46378" started-at="2014-12-30T08:15:38Z" finished-at="2014-12-30T08:16:24Z">
+  <suite name="Default suite" duration-ms="11385" started-at="2015-01-03T14:08:07Z" finished-at="2015-01-03T14:08:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46378" started-at="2014-12-30T08:15:38Z" finished-at="2014-12-30T08:16:24Z">
-      <class name="com.example.tests.AdressCreateTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="setUp" is-config="true" duration-ms="9639" started-at="2014-12-30T11:15:38Z" finished-at="2014-12-30T11:15:47Z">
+    <test name="Default test" duration-ms="11385" started-at="2015-01-03T14:08:07Z" finished-at="2015-01-03T14:08:18Z">
+      <class name="com.example.tests.GroupeMidifyTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupeMidifyTest@ba4d54]" name="setUp" is-config="true" duration-ms="5157" started-at="2015-01-03T17:08:07Z" finished-at="2015-01-03T17:08:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="7460" started-at="2014-12-30T11:15:47Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-30T11:15:55Z">
+        <test-method status="PASS" signature="modifyGroup(com.example.tests.GroupDate)[pri:0, instance:com.example.tests.GroupeMidifyTest@ba4d54]" name="modifyGroup" duration-ms="5915" started-at="2015-01-03T17:08:12Z" finished-at="2015-01-03T17:08:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname= ,fname=test1633339812,  address=test1697268647, home= , mobile=test-481807556, work=test-2081621550, email=test-1210181164, email2=test151795868, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test1414943240, phone2=test-2117351943]]]>
+                <![CDATA[GroupDate [groupname=test-1143981577, header= ,footer=test-1989284025 ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="7072" started-at="2014-12-30T11:15:55Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-30T11:16:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AddressDate [lastname=test-1518684246,fname=test361247214,  address=test700169831, home=test-186204961, mobile= , work=test-1826175265, email= , email2=test1365173992, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1981489755]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="7146" started-at="2014-12-30T11:16:02Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-30T11:16:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AddressDate [lastname=test-1220445140,fname=test-914663629,  address= , home=test1274515875, mobile= , work= , email=test-1865110537, email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-597656152]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="7174" started-at="2014-12-30T11:16:09Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-30T11:16:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AddressDate [lastname=test-1669935938,fname=test1376145278,  address=test1355372072, home=test-1824781483, mobile=test663721314, work=test-650347634, email=test1304140860, email2=test1995682549, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-2130625366]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressDate)[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="testAddressCreationwithValidData" duration-ms="7512" started-at="2014-12-30T11:16:16Z" data-provider="randomValidAddressGenerator" finished-at="2014-12-30T11:16:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[AddressDate [lastname= ,fname=test-1289574161,  address= , home= , mobile=test-1655875714, work= , email=test935756073, email2=test-1403219705, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-522604699]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AdressCreateTest@2d6d8735]" name="tearDown" is-config="true" duration-ms="354" started-at="2014-12-30T11:16:24Z" finished-at="2014-12-30T11:16:24Z">
+        </test-method> <!-- modifyGroup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupeMidifyTest@ba4d54]" name="tearDown" is-config="true" duration-ms="302" started-at="2015-01-03T17:08:18Z" finished-at="2015-01-03T17:08:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.AdressCreateTest -->
+      </class> <!-- com.example.tests.GroupeMidifyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

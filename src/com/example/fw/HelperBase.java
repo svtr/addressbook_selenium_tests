@@ -78,12 +78,21 @@ public abstract  class HelperBase {
 	
 	
 	public static String replaceNull(String input) {
-		  return input == null ? " " : input;
+		if   (input == null){
+			return " ";	
 		}
+		else return input;
+	    }
+	
+	
 	
 	public static String replaceEmpty(String input) {
-		  return input == "" ? " " : input;
+		if   (input.isEmpty() == true){
+			return " ";	
 		}
+		else return input;
+	    }
 	
+
 
 }

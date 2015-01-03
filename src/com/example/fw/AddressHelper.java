@@ -109,25 +109,23 @@ public class AddressHelper extends HelperBase {
 	public List<AddressDate> GetAddress() {
 
 		    List<AddressDate> addrs = new ArrayList<AddressDate>();
-			List<WebElement> checkboxes = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr/td[2]"));
-			for (WebElement td : checkboxes) {
+			List<WebElement> table = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr[position()>1 and position()!=last()]"));
+						
+			for (WebElement  td: table) {
 				AddressDate address = new AddressDate();
-				String text = td.getText();
-     			address.lastname =   replaceNull(text);
-				address.fname = replaceNull(address.fname);
-				address.address = replaceNull(address.address);
-				address.home = replaceNull(address.home);
-				address.mobile = replaceNull(address.mobile);
-				address.work = replaceNull(address.work);
-				address.email = replaceNull(address.email);
-				address.email2 = replaceNull(address.email2);
-				address.bday = replaceNull(address.bday);
-				address.bmonth = replaceNull(address.bmonth);
-				address.byear = replaceNull(address.byear);
-				address.groupdate = replaceNull(address.groupdate);
-				address.address2 = replaceNull(address.address2);
-				address.phone2 = replaceNull(address.phone2);
-				addrs.add(address);
+				address.lastname = td.findElement(By.xpath(".//td[2]")).getText();
+     			address.lastname =   replaceNull(address.lastname);
+     			address.lastname =   replaceEmpty(address.lastname);
+     			address.fname = td.findElement(By.xpath(".//td[3]")).getText();
+     			address.fname = replaceNull(address.fname);
+     			address.fname = replaceEmpty(address.fname);
+                address.email = td.findElement(By.xpath(".//td[4]")).getText();
+                address.email = replaceNull(address.email);
+                address.email = replaceEmpty(address.email);
+                address.home = td.findElement(By.xpath(".//td[5]")).getText();
+                address.home = replaceNull(address.home);
+                address.home = replaceEmpty(address.home);
+               	addrs.add(address);
 				
 			}
 			return addrs;

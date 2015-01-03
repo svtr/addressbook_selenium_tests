@@ -48,31 +48,40 @@ public class AddressDate implements Comparable<AddressDate> {
 
 	@Override
 	public int hashCode() {
-			int result = 1;
-			return result;
+		final int prime = 31;
+		int result = 1;
+		
+		return result;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		AddressDate other = (AddressDate) obj;
-		if (lastname == null) {
-			if (other.lastname != null)
-		     return false;
-		}
-		if ( (lastname == " ")||(lastname.isEmpty())) {
-		      if (other.lastname.isEmpty()||(lastname == " "))
-		    	  return true;
-		}     
-		  else if (!lastname.equals(other.lastname))
-			return false;
-		return true;
-	}
+//	@Override
+	//public boolean equals(Object obj) {
+	//	if (this == obj)
+	//		return true;
+	//	if (obj == null)
+	//		return false;
+	//	if (getClass() != obj.getClass())
+	//		return false;
+	//	AddressDate other = (AddressDate) obj;
+	//	if (lastname == null) {
+	//		if (other.lastname != null)
+	//	     return false;
+	//	}
+	//	if ( (lastname == " ")||(lastname.isEmpty())) {
+	//	      if (other.lastname.isEmpty()||(lastname == " "))
+	//	   	  return true;
+	//	
+	//	}     
+	//	  else if (!lastname.equals(other.lastname))
+	//		return false;
+	//	return true;
+	//}
+	
+	
+	
+	
+	
+	
 
 	@Override
 	public String toString() {
@@ -85,10 +94,69 @@ public class AddressDate implements Comparable<AddressDate> {
 	}
 
 	
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AddressDate other = (AddressDate) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if ( (email == " ")||(email.isEmpty())) {
+		    if (other.email.isEmpty()||(other.email == " "))
+    		  	return true;
+		} else if (!email.equals(other.email))
+			return false;
+		if (fname == null) {
+			if (other.fname != null)
+				return false;
+		
+		} else if ( (fname == " ")||(fname.isEmpty())) {
+		     if (other.fname.isEmpty()||(other.fname == " "))
+    		  	return true;
+		} else if (!fname.equals(other.fname))
+			return false;
+		if (home == null) {
+			if (other.home != null)
+				return false;
+		} else if ( (home == " ")||(home.isEmpty())) {
+		     if (other.home.isEmpty()||(other.home == " "))
+	    		  	return true;
+		} else if (!home.equals(other.home))
+			return false;
+		if (lastname == null) {
+			if (other.lastname != null)
+				return false;
+		} else if( (lastname == " ")||(lastname.isEmpty())) {
+		     if (other.lastname.isEmpty()||(other.lastname == " "))
+	    		return true;
+		} else if (!lastname.equals(other.lastname))
+			return false;
+		return true;
+	}
+
 	@Override
 	public int compareTo(AddressDate other) {
-
-			return this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
+     
+		int result = this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
+		if (result == 0) result = this.fname.toLowerCase().compareTo(other.fname.toLowerCase());
+		if (result == 0) result = this.home.toLowerCase().compareTo(other.home.toLowerCase());
+		if (result == 0) result = this.email.toLowerCase().compareTo(other.email.toLowerCase());
+        return result;
+		
+		
+     	 
+     
+     
+     
+     
+      
+    
 	}
 	
 	

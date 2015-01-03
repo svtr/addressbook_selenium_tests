@@ -43,8 +43,8 @@ public class AdressCreateTest extends TestBase{
       oldList.add(address);      
       //save new list
        List<AddressDate> newList = app.getAddressHelper().GetAddress();
+       Collections.sort(oldList);
        Collections.sort(newList);
-       Collections.sort(oldList);  
        assertEquals(newList, oldList);
   }
   

@@ -19,7 +19,7 @@ public class AddressRemoveTest extends TestBase{
 		
 		List<AddressDate> oldList = app.getAddressHelper().GetAddress();
 		Random rnd = new Random();
-		int index = rnd.nextInt(oldList.size()-2);
+		int index = rnd.nextInt(oldList.size()-1);
 		
 		
 	    app.getAddressHelper().deleteAddress(index);
