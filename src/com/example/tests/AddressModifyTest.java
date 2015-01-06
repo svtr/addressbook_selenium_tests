@@ -20,21 +20,14 @@ public class AddressModifyTest extends TestBase{
 	@Test(dataProvider = "randomValidAddressGenerator")
 	public void modifyAddress(AddressDate address) throws Exception{
 	
-//    app.navigateTO().GetUrl(app).mainPage();
+
 	
 	 //save old list
 	SortedListOf<AddressDate> oldList = app.getAddressHelper().GetAddress();
 	Random rnd = new Random();
 	int index = rnd.nextInt(oldList.size()-1);
 	app.getAddressHelper().modifyAddress(index,address);  
-//	app.getAddressHelper()
-//	.initmodifyaddress(index)
-//	.fillFormAddress(address, MODIFICATION);
-//	app.getAddressHelper().updateAddressForm();
-	
-//	app.getAddressHelper().updateAddressForm();
-//	app.navigateTO().returnPage("home page");	
-	
+
 	
 	 //save new list
 	SortedListOf<AddressDate> newList = app.getAddressHelper().GetAddress();

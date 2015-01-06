@@ -17,7 +17,7 @@ public GroupHelper createGroup(GroupDate group) {
     	newGroupCreation();
     	fillGroupForm(group);
         submitForm();
-    	manager.navigateTO().returnPage("group page");
+    	manager.navigateTO().gotoPage("group page");
     	rebuildCache();
     	return this;
 		
@@ -28,7 +28,7 @@ public GroupHelper modifyGroup(GroupDate group, int index) {
 		initmodifygroupe(index);
 		fillGroupForm(group);
 		submitGroupForm();
-		manager.navigateTO().returnPage("group page");
+		manager.navigateTO().gotoPage("group page");
 		rebuildCache();
 		return this;
 	}	
@@ -36,7 +36,7 @@ public GroupHelper modifyGroup(GroupDate group, int index) {
 public GroupHelper deletegroupe(int index) {
 		selectGroupeByIndex(index);
 		submitGroupDelete();
-		manager.navigateTO().returnPage("group page");
+		manager.navigateTO().gotoPage("group page");
 		rebuildCache();
 		return this;
 		

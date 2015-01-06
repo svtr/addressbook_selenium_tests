@@ -27,7 +27,7 @@ public class AddressHelper extends HelperBase {
 		gotoCreateAddress();
 	    fillFormAddress(address, CREATION);
 	    submitFormCreateAddress();
-	    manager.navigateTO().returnPage("home page");
+	    manager.navigateTO().gotoPage("home page");
 	    rebuildCache();
 	    return this;
 	}
@@ -36,7 +36,7 @@ public class AddressHelper extends HelperBase {
 		initmodifyaddress(index);
 		fillFormAddress(address, MODIFICATION);
 		updateAddressForm();
-		manager.navigateTO().returnPage("home page");
+		manager.navigateTO().gotoPage("home page");
 		rebuildCache();
 		return this;
 	}
@@ -45,7 +45,7 @@ public class AddressHelper extends HelperBase {
 		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+2)
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
-	    manager.navigateTO().returnPage("home page");
+	    manager.navigateTO().gotoPage("home page");
 	    rebuildCache();
 		return this;
 	}

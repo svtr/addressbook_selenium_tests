@@ -24,15 +24,5 @@ public class AdressCreateTest extends TestBase{
   
   
   
-
-  //@Test
-  //public void testEmptyPhoneCreation() throws Exception {
-//	      app.navigateTO().GetUrl(app);
-//		  app.navigateTO().mainPage();
-//		  app.navigateTO().gotoPage("add new");
-//		  
-//	      app.getAddressHelper().fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "),CREATION);
-//	      app.navigateTO().submitForm();
-//	      app.navigateTO().returnPage("home page");
-//	  }
 }
+ 
