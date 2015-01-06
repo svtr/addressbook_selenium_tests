@@ -1,15 +1,10 @@
 package com.example.fw;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.example.tests.GroupDate;
-//import com.example.tests.TestBase;
+import com.example.utils.*;
 
 public class GroupHelper extends HelperBase {
 	   
@@ -17,53 +12,113 @@ public class GroupHelper extends HelperBase {
 		super(manager);
 		}
 
-	public void fillGropForm(GroupDate group) {
-		type(By.name("group_name"), group.groupname);
-		type(By.name("group_header"), group.header);
-		type(By.name("group_footer"), group.footer);
-	    	 
+public GroupHelper createGroup(GroupDate group) {
+     	manager.navigateTO().gotoPage("groups");
+    	newGroupCreation();
+    	fillGroupForm(group);
+        submitForm();
+    	manager.navigateTO().returnPage("group page");
+    	rebuildCache();
+    	return this;
+		
 	}
+	
 
-	public void newGroupCreation() {
-		click(By.name("new"));
-	}
-
-	public void deletegroupe(int index) {
+public GroupHelper modifyGroup(GroupDate group, int index) {
+		initmodifygroupe(index);
+		fillGroupForm(group);
+		submitGroupForm();
+		manager.navigateTO().returnPage("group page");
+		rebuildCache();
+		return this;
+	}	
+	
+public GroupHelper deletegroupe(int index) {
 		selectGroupeByIndex(index);
-		click(By.name("delete"));
+		submitGroupDelete();
+		manager.navigateTO().returnPage("group page");
+		rebuildCache();
+		return this;
 		
 	}
 
-	private void selectGroupeByIndex(int index) {
-		click(By.xpath("//input[@name='selected[]']["+(index+1)+"]"));
-	}
+private SortedListOf<GroupDate> cachedGroups;
 
-	public void initmodifygroupe(int index) {
-		selectGroupeByIndex(index);
-		click(By.name("edit"));
+public SortedListOf<GroupDate> GetGroups() {
+	 
+	    if (cachedGroups == null){
+	    rebuildCache();
+	    } 
+	    return cachedGroups;
 		
 	}
-
-	public void submitGroupForm() {
-		click(By.name("update"));
-		
-	}
-
-	public List<GroupDate> GetGroups() {
-		List<GroupDate> groups = new ArrayList<GroupDate>();
+private void rebuildCache() {
+ 
+	    cachedGroups =  new SortedListOf<GroupDate>();
+		manager.navigateTO().gotoPage("groups");
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
-			GroupDate group = new GroupDate();
 			String title = checkbox.getAttribute("title");
-			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
-			group.groupname =  replaceNull(group.groupname);
-			group.header =  replaceNull(group.header);
-			group.footer =  replaceNull(group.footer);
-			groups.add(group);
+			String groupname=   title.substring("Select (".length(), title.length() - ")".length());
+			groupname =  replaceNullOrEmpty(groupname);
+//			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
+//			group.groupname =  replaceNull(group.groupname);
+	        cachedGroups.add(new GroupDate().withGroupName(groupname));
 			
 		}
-		return groups;
+	
+}
+
+//------------------------------------------------------отделяем высокоуровневые методы для читаемости
+
+
+   private GroupHelper submitGroupDelete() {
+	    click(By.name("delete"));
+	    cachedGroups = null;
+	    return this;
+}	
+
+
+	public GroupHelper fillGroupForm(GroupDate group) {
+		type(By.name("group_name"), group.getGroupname());
+		type(By.name("group_header"), group.getHeader());
+		type(By.name("group_footer"), group.getFooter());
+		return this;	    	 
 	}
+
+	public GroupHelper newGroupCreation() {
+		click(By.name("new"));
+		return this;
+	}
+
+
+
+	private GroupHelper selectGroupeByIndex(int index) {
+		click(By.xpath("//input[@name='selected[]']["+(index+1)+"]"));
+		return this;
+	}
+
+	public GroupHelper initmodifygroupe(int index) {
+		selectGroupeByIndex(index);
+		click(By.name("edit"));
+		return this;
+		
+	}
+
+	public GroupHelper submitGroupForm() {
+		click(By.name("update"));
+		cachedGroups = null;
+		return this;
+	}
+
+
+	public GroupHelper submitForm() {
+		driver.findElement(By.name("submit")).click();
+		cachedGroups = null;
+		return this;
+	}
+
+	
 
 
 	

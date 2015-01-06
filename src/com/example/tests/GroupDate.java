@@ -1,9 +1,9 @@
 package com.example.tests;
 
 public class GroupDate implements Comparable<GroupDate>{
-	public String groupname;
-	public String header;
-	public String footer;
+	private String groupname;
+	private String header;
+	private String footer;
 
 	public GroupDate() {
 		
@@ -22,10 +22,8 @@ public class GroupDate implements Comparable<GroupDate>{
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
 		int result = 1;
-	//	result = prime * result
-	//			+ ((groupname == null) ? 0 : groupname.hashCode());
+
 		return result;
 	}
 
@@ -39,7 +37,7 @@ public class GroupDate implements Comparable<GroupDate>{
 			return false;
 		GroupDate other = (GroupDate) obj;
 		if (groupname == null) {
-			if ((other.groupname != null)||(other.groupname != ""))
+			if ((other.groupname != null)||(!other.groupname.equals("")))
 				return false;
 		} else if (!groupname.equals(other.groupname))
 			return false;
@@ -52,6 +50,46 @@ public class GroupDate implements Comparable<GroupDate>{
 		
 		return this.groupname.toLowerCase().compareTo(other.groupname.toLowerCase());
 	}
+
+	public GroupDate withGroupName(String groupname) {
+		this.groupname = groupname;
+		return this;
+	}
+
+	public GroupDate withHeader(String header) {
+		this.header = header;
+		return this;
+	}
+
+	public GroupDate withFooter(String footer) {
+		this.footer = footer;
+		return this;
+	}
+
+	public String getGroupname() {
+		return groupname;
+	}
+
+	public void setGroupname(String groupname) {
+		this.groupname = groupname;
+	}
+
+	public String getHeader() {
+		return header;
+	}
+
+	public void setHeader(String header) {
+		this.header = header;
+	}
+
+	public String getFooter() {
+		return footer;
+	}
+
+	public void setFooter(String footer) {
+		this.footer = footer;
+	}
+
 	
 	
 }

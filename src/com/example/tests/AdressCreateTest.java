@@ -1,12 +1,9 @@
 package com.example.tests;
 
-import static org.testng.Assert.assertEquals;
-
-import java.util.Collections;
-import java.util.List;
-
+import static org.hamcrest.Matchers.equalTo;
+import com.example.utils.*;
 import org.testng.annotations.Test;
-
+import static org.junit.Assert.assertThat;
 
 
 public class AdressCreateTest extends TestBase{
@@ -14,38 +11,14 @@ public class AdressCreateTest extends TestBase{
   @Test(dataProvider = "randomValidAddressGenerator")
   public void testAddressCreationwithValidData(AddressDate address) throws Exception {
     
-	  app.getNavigationHelper().GetUrl(app);
-	  app.getNavigationHelper().openMainPage();
-	  
-	  //save old list
-	  List<AddressDate> oldList = app.getAddressHelper().GetAddress();
-	  
-      app.getNavigationHelper().gotoPage("add new");
-      
-     // AddressDate addr = new AddressDate();
-      //addr.fname = "Ivan";
-      //addr.lastname = "Ivanov";
-	  //addr.address = "Spb";
-      //addr.home = "";
-	  //addr.mobile = "89211111111";
-	  //addr.work = "89211111111";
-	  //addr.email = "my@mail.ru";
-	  //addr.email2 = "my2@mail.ru";
-	  //addr.bday = "1";
-	  //addr.bmonth = "January";
-	  //addr.byear = "1980";
-	  //addr.groupdate = "group1";
-	  //addr.address2 = "address";
-	  //addr.phone2 = "phone2";
-      app.getAddressHelper().fillFormAddress(address);
-      app.getNavigationHelper().submitForm();
-      app.getNavigationHelper().returnPage("home page");
-      oldList.add(address);      
+      //save old list
+	  SortedListOf<AddressDate> oldList = app.getAddressHelper().GetAddress();
+	  //action
+      app.getAddressHelper().createAddress(address);
       //save new list
-       List<AddressDate> newList = app.getAddressHelper().GetAddress();
-       Collections.sort(oldList);
-       Collections.sort(newList);
-       assertEquals(newList, oldList);
+      SortedListOf<AddressDate> newList = app.getAddressHelper().GetAddress();
+      //compare
+ 	  assertThat(newList, equalTo(oldList.withAdded(address)));
   }
   
   
@@ -53,13 +26,13 @@ public class AdressCreateTest extends TestBase{
   
 
   //@Test
-  public void testEmptyPhoneCreation() throws Exception {
-	      app.getNavigationHelper().GetUrl(app);
-		  app.getNavigationHelper().openMainPage();
-		  app.getNavigationHelper().gotoPage("add new");
-		  
-	      app.getAddressHelper().fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "));
-	      app.getNavigationHelper().submitForm();
-	      app.getNavigationHelper().returnPage("home page");
-	  }
+  //public void testEmptyPhoneCreation() throws Exception {
+//	      app.navigateTO().GetUrl(app);
+//		  app.navigateTO().mainPage();
+//		  app.navigateTO().gotoPage("add new");
+//		  
+//	      app.getAddressHelper().fillFormAddress(new AddressDate(" ", " ", " "," ", " ", " "," ", " "," " ," ", " ", " "," ", " "),CREATION);
+//	      app.navigateTO().submitForm();
+//	      app.navigateTO().returnPage("home page");
+//	  }
 }

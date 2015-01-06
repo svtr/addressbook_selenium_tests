@@ -42,13 +42,17 @@ public class TestBase {
 		
 	List<Object[]> list =  new ArrayList<Object[]>();
 	
-	for (int i = 0; i<1; i++)
+	for (int i = 0; i<5; i++)
 	{
-		GroupDate group = new GroupDate();
+		GroupDate group = new GroupDate()
+		 .withGroupName (generateRandomString())
+		 .withHeader (generateRandomString())
+         .withFooter(generateRandomString());
 		
-		 group.groupname = generateRandomString();
-	     group.header = generateRandomString();
-         group.footer =generateRandomString();
+// убрали 4 урок при добавление верхней строки вытягивание в цепочку
+//		 group.groupname = generateRandomString();
+//	     group.header = generateRandomString();
+//       group.footer =generateRandomString();
          list.add(new Object[]{group});
 		
 	}
@@ -68,21 +72,35 @@ public class TestBase {
 	
 	for (int i = 0; i<5; i++)
 	{
-		 AddressDate address = new AddressDate();
-		 address.lastname =  generateRandomString();
-		 address.fname =  generateRandomString();
-         address.address =  generateRandomString();
-	     address.home =  generateRandomString();
-		 address.mobile =  generateRandomString();
-		 address.work =  generateRandomString();
-		 address.email =  generateRandomString();
-		 address.email2 =  generateRandomString();
-		 address.bday = "1";
-		 address.bmonth = "January";
-		 address.byear = "1980";
-		 address.groupdate = "group1";
-		 address.address2 =  generateRandomString();
-		 address.phone2 =  generateRandomString();
+		 AddressDate address = new AddressDate()
+		 .withLastName (generateRandomString())
+		 .withFname(generateRandomString())
+		 .withAddress(generateRandomString())
+		 .withHome(generateRandomString())
+		 .withMobile(generateRandomString())
+		 .withWork(generateRandomString())
+		 .withEmail(generateRandomString())
+		 .withEmail2(generateRandomString())
+		 .withbDay("1")
+		 .withbMounth("January")
+		 .withbYear("1980")
+		 .withGroupDate("group1")
+		 .withAddress2(generateRandomString())
+		 .withPhone2(generateRandomString());
+//		 address.lastname =  generateRandomString();
+//		 address.fname =  generateRandomString();
+//         address.address =  generateRandomString();
+//	     address.home =  generateRandomString();
+//		 address.mobile =  generateRandomString();
+//		 address.work =  generateRandomString();
+//		 address.email =  generateRandomString();
+//		 address.email2 =  generateRandomString();
+//		 address.bday = "1";
+//		 address.bmonth = "January";
+//		 address.byear = "1980";
+//       address.groupdate = "group1";
+//		 address.address2 =  generateRandomString();
+//		 address.phone2 =  generateRandomString();
          list.add(new Object[]{address});
 		
 	}

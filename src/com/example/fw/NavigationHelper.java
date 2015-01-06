@@ -1,6 +1,9 @@
 package com.example.fw;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class NavigationHelper  extends HelperBase{
 
@@ -8,25 +11,54 @@ public class NavigationHelper  extends HelperBase{
 		super(manager);
 		}
 
-	public void openMainPage() {
-		driver.findElement(By.linkText("addressbookv4.1.4")).click();
+	public void mainPage() {
+		if (!onMainPage()){
+//			driver.get(manager.baseUrl + "/addressbookv4.1.4/");
+            click(By.linkText("home"));
+		}
+	}
+
+	private boolean onMainPage() {
+		return (driver.findElements(By.id("maintable")).size()>0);
 	}
 
 	public void gotoPage(String namepage) {
 	
 		driver.findElement(By.linkText(namepage)).click();
+
 	}
 
-	public void returnPage(String pageName) {
-		driver.findElement(By.linkText(pageName)).click();
+	
+	
+	public  NavigationHelper returnPage(String pageName) {
+		if ((pageName =="groups")&&(!onGroupPage())){
+		click(By.linkText("groups"));
+		}
+		if ((pageName =="home page")&&!onMainPage())
+		{
+		click(By.linkText("home page"));
+		}
+		if (pageName =="group page"){
+			driver.findElement(By.linkText(pageName)).click();
+		}
+		return this;
+				
 	}
 
-	public void submitForm() {
-		driver.findElement(By.name("submit")).click();
+	private boolean onGroupPage() {
+		if (driver.getCurrentUrl().contains("/group.php")&& (driver.findElements(By.name("new")).size()>0)){
+		return true;
+		} else {
+				return false;
+		}
+		
 	}
 
-	public void GetUrl(ApplicationManager applicationManager) {
-		applicationManager.driver.get(applicationManager.baseUrl + "/");
+
+
+	public NavigationHelper GetUrl() {
+		driver.get(manager.baseUrl + "/addressbookv4.1.4/");
+		return this;
 	}
 
 	

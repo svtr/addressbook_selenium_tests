@@ -77,12 +77,15 @@ public abstract  class HelperBase {
     
 	
 	
-	public static String replaceNull(String input) {
+	public static String replaceNullOrEmpty(String input) {
 		if   (input == null){
 			return " ";	
 		}
-		else return input;
-	    }
+		if   (input.isEmpty() == true){
+			return " ";
+		}		
+		return input;
+	  }
 	
 	
 	

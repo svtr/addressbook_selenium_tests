@@ -26,11 +26,12 @@ public class ApplicationManager {
 	public ApplicationManager(){
 		 driver = new FirefoxDriver();
 		 baseUrl = "http://localhost";
-		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
+		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
 //       Нинициализация  	
 //		 navigationhelper = new NavigationHelper(this); 
 //		 adresshelper = new AddressHelper(this);
 //		 grouphelper = new GroupHelper(this);
+		 driver.get(baseUrl + "/addressbookv4.1.4/");
 	}
 	
 	
@@ -39,7 +40,7 @@ public class ApplicationManager {
 	
 	}
 // лк	
-	public NavigationHelper getNavigationHelper() {
+	public NavigationHelper navigateTO() {
 	if (navigationhelper == null) 
 	{	
 		navigationhelper = new NavigationHelper(this);
