@@ -1,15 +1,20 @@
 package com.example.tests;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
+import java.util.Properties;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
 import com.example.fw.ApplicationManager;
+
+import static com.example.tests.GroupDataGenerator.generateRandomGroups;
+import static com.example.tests.GroupDataGenerator.generateRandomString;
 //import org.apache.bcel.generic.Select;
 
 
@@ -23,7 +28,9 @@ public class TestBase {
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		app = new ApplicationManager();
+		Properties properties = new Properties();
+		properties.load(new FileReader(new File ("test.properties")));
+		app = new ApplicationManager(properties);
 	   
 	  }
 	
@@ -39,32 +46,23 @@ public class TestBase {
 	
 	@DataProvider
 	public Iterator<Object[]> randomValidGroupGenerator(){
-		
-	List<Object[]> list =  new ArrayList<Object[]>();
-	
-	for (int i = 0; i<5; i++)
-	{
-		GroupDate group = new GroupDate()
-		 .withGroupName (generateRandomString())
-		 .withHeader (generateRandomString())
-         .withFooter(generateRandomString());
-		
-// убрали 4 урок при добавление верхней строки вытягивание в цепочку
-//		 group.groupname = generateRandomString();
-//	     group.header = generateRandomString();
-//       group.footer =generateRandomString();
-         list.add(new Object[]{group});
-		
-	}
-	
-	
 	//....
-	return list.iterator();
+	return wrapGroupDateForProvider(generateRandomGroups(5)).iterator();
 		
 	}
 	
 	
 	
+	protected List<Object[]> wrapGroupDateForProvider(List<GroupDate> groups) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (GroupDate group :groups) {
+			list.add(new Object[]{group});
+		}
+		return list;
+	}
+
+
+
 	@DataProvider
 	public Iterator<Object[]> randomValidAddressGenerator(){
 		
@@ -114,15 +112,6 @@ public class TestBase {
 
 	
 	
-	public String generateRandomString()
-	{
-		Random rnd = new Random();
-		if (rnd.nextInt(3) == 0)
-		{
-			return " ";
-			
-		}	else  
-			return "test" + rnd.nextInt();
-	}
+	
 
 }

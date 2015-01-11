@@ -1,17 +1,33 @@
 package com.example.tests;
 
+import java.io.File;
+import java.util.Iterator;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.example.utils.*;
+
+import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
 import static org.testng.Assert.assertEquals;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 
 public class GroupeCreationTests extends TestBase{
+
 	
-  	
-  @Test(dataProvider = "randomValidGroupGenerator")
+	@DataProvider
+	public Iterator<Object[]> groupsFromFile() throws Exception {
+	//....
+	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("groups.txt"))).iterator();
+		
+	}
+	
+
+
+
+@Test(dataProvider = "groupsFromFile")
   public void testGroupCreationwithValidData(GroupDate group) throws Exception {
 //      app.navigateTO().mainPage();
 //      app.navigateTO().gotoPage("groups");

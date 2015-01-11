@@ -2,12 +2,6 @@ package com.example.tests;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
-import static org.testng.Assert.assertEquals;
-import static com.example.fw.AddressHelper.CREATION;
-import static com.example.fw.AddressHelper.MODIFICATION;
-
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 
 import org.testng.annotations.Test;

@@ -48,7 +48,6 @@ public class AddressDate implements Comparable<AddressDate> {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
 		int result = 1;
 		
 		return result;

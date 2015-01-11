@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Kolosov\AppData\Local\Temp\testng-eclipse--1597575872\testng-customsuite.xml</span>
+                    <span>C:\Users\Kolosov\AppData\Local\Temp\testng-eclipse--2132368596\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,41 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.AdressCreateTest" hash-for-method="testAddressCreationwithValidData(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile...)">testAddressCreationwithValidData(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupeCreationTests" hash-for-method="testGroupCreationwithValidData">testGroupCreationwithValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.AdressCreateTest" hash-for-method="testAddressCreationwithValidData(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-162927753...)">testAddressCreationwithValidData(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-162927753...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.AdressCreateTest" hash-for-method="testAddressCreationwithValidData(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=...)">testAddressCreationwithValidData(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.AdressCreateTest" hash-for-method="testAddressCreationwithValidData(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-15902681...)">testAddressCreationwithValidData(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-15902681...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.AdressCreateTest" hash-for-method="testAddressCreationwithValidData(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile=...)">testAddressCreationwithValidData(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile=...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,58 +116,62 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.example.tests.AdressCreateTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.example.tests.GroupeCreationTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddressCreationwithValidData(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile...)">
-                  </a> <!-- testAddressCreationwithValidData(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile...) -->
-                  <span class="method-name">testAddressCreationwithValidData</span>
-                  <span class="parameters">(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile=test-778482080, work=test783351231, email= , email2=test1023693787, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test1151205425])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddressCreationwithValidData(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-162927753...)">
-                  </a> <!-- testAddressCreationwithValidData(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-162927753...) -->
-                  <span class="method-name">testAddressCreationwithValidData</span>
-                  <span class="parameters">(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-1629277532, work=test36582212, email=test404943688, email2=test592087146, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test1046803836])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddressCreationwithValidData(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=...)">
-                  </a> <!-- testAddressCreationwithValidData(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=...) -->
-                  <span class="method-name">testAddressCreationwithValidData</span>
-                  <span class="parameters">(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=test-1373530165, work=test1553223070, email=test-1423155440, email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-2122172439])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddressCreationwithValidData(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-15902681...)">
-                  </a> <!-- testAddressCreationwithValidData(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-15902681...) -->
-                  <span class="method-name">testAddressCreationwithValidData</span>
-                  <span class="parameters">(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-1590268133, work=test-1145906069, email= , email2=test1307505830, bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test1402151385, phone2=test580086984])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAddressCreationwithValidData(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile=...)">
-                  </a> <!-- testAddressCreationwithValidData(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile=...) -->
-                  <span class="method-name">testAddressCreationwithValidData</span>
-                  <span class="parameters">(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile= , work= , email=test2070872743, email2=test1036330168, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test1323806968])</span>
+                  <a name="testGroupCreationwithValidData">
+                  </a> <!-- testGroupCreationwithValidData -->
+                  <span class="method-name">testGroupCreationwithValidData</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.&lt;init&gt;(Unknown Source)
+	at java.io.FileReader.&lt;init&gt;(Unknown Source)
+	at com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile(GroupDataGenerator.java:41)
+	at com.example.tests.GroupeCreationTests.groupsFromFile(GroupeCreationTests.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+	... 20 more
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Kolosov\AppData\Local\Temp\testng-eclipse--1597575872\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Kolosov\AppData\Local\Temp\testng-eclipse--2132368596\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,7 +180,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.tests.AdressCreateTest&quot;/&gt;
+      &lt;class name=&quot;com.example.tests.GroupeCreationTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -236,32 +220,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAddressCreationwithValidData')
-data.setCell(0, 2, 'com.example.tests.AdressCreateTest')
-data.setCell(0, 3, 13552);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAddressCreationwithValidData')
-data.setCell(1, 2, 'com.example.tests.AdressCreateTest')
-data.setCell(1, 3, 10768);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAddressCreationwithValidData')
-data.setCell(2, 2, 'com.example.tests.AdressCreateTest')
-data.setCell(2, 3, 10184);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAddressCreationwithValidData')
-data.setCell(3, 2, 'com.example.tests.AdressCreateTest')
-data.setCell(3, 3, 10018);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testAddressCreationwithValidData')
-data.setCell(4, 2, 'com.example.tests.AdressCreateTest')
-data.setCell(4, 3, 9974);
+data.setCell(0, 1, 'testGroupCreationwithValidData')
+data.setCell(0, 2, 'com.example.tests.GroupeCreationTests')
+data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -287,35 +255,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.example.tests.AdressCreateTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.example.tests.GroupeCreationTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">testAddressCreationwithValidData(AddressDate [lastname=test-487668099,fname=test-1934191709,  address= , home= , mobile=test-15902681...)</span>
-                <span class="method-start">5767 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAddressCreationwithValidData(AddressDate [lastname= ,fname=test1665800764,  address=test1109226949, home= , mobile=test-162927753...)</span>
-                <span class="method-start">19320 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAddressCreationwithValidData(AddressDate [lastname= ,fname=test-1721468618,  address=test1286286450, home=test1066077821, mobile=...)</span>
-                <span class="method-start">29295 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAddressCreationwithValidData(AddressDate [lastname=test-1529849497,fname=test1274319882,  address= , home=test-805698519, mobile=...)</span>
-                <span class="method-start">39480 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAddressCreationwithValidData(AddressDate [lastname=test-1068751700,fname=test1273931199,  address=test-1494916010, home= , mobile...)</span>
-                <span class="method-start">49498 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">60267 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
