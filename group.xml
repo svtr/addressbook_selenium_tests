@@ -1,38 +1,8 @@
 <list>
   <group>
-    <groupname>test-2103847229</groupname>
-    <header>test988213585</header>
-    <footer> </footer>
-  </group>
-  <group>
-    <groupname>test968295740</groupname>
-    <header> </header>
-    <footer>test628072487</footer>
-  </group>
-  <group>
-    <groupname>test-118517881</groupname>
-    <header>test2013647626</header>
-    <footer>test-9292267</footer>
-  </group>
-  <group>
-    <groupname>test871934716</groupname>
-    <header> </header>
-    <footer>test113624843</footer>
-  </group>
-  <group>
-    <groupname>test-1844808449</groupname>
-    <header> </header>
-    <footer>test-2076619554</footer>
-  </group>
-  <group>
     <groupname>test9384384</groupname>
     <header> </header>
     <footer> </footer>
-  </group>
-  <group>
-    <groupname>test-1759538915</groupname>
-    <header>test1835917421</header>
-    <footer>test1265949230</footer>
   </group>
   <group>
     <groupname> </groupname>
@@ -43,10 +13,5 @@
     <groupname>test-1589935591</groupname>
     <header>test-1985799553</header>
     <footer> </footer>
-  </group>
-  <group>
-    <groupname>test1151372443</groupname>
-    <header>test360966036</header>
-    <footer>test-1533677168</footer>
   </group>
 </list>

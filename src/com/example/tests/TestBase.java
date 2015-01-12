@@ -20,6 +20,8 @@ import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
 
 import static com.example.tests.AddressDataGenerator.generateRandomAddress;
 import static com.example.tests.AddressDataGenerator.loadAddressFromCsvFile;
+import static com.example.tests.AddressDataGenerator.loadAddressFromXmlFile;
+import static com.example.fw.ApplicationManager.formattext;
 
 //import org.apache.bcel.generic.Select;
 
@@ -31,13 +33,12 @@ public class TestBase {
 	public static ApplicationManager app;
 
 
-
 	@BeforeTest
 	public void setUp() throws Exception {
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File ("test.properties")));
 		app = new ApplicationManager(properties);
-	   
+   
 	  }
 	
 
@@ -76,17 +77,23 @@ public class TestBase {
 	
 	@DataProvider
 	public Iterator<Object[]> groupsFromFile() throws Exception {
-	//....
+	//
+    if (formattext.equals("xml") ){
+	return wrapGroupDateForProvider(loadGroupsFromXmlFile(new File ("group.xml"))).iterator();
+	}else if  (formattext.equals("csv")){
 	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("group.txt"))).iterator();
-		
+	} else 	return wrapGroupDateForProvider(loadGroupsFromXmlFile(new File ("group.xml"))).iterator();
+    
 	}
 	
 	
 	@DataProvider
 	public Iterator<Object[]> addressFromFile() throws Exception {
-	//....
-	return wrapAddressDateForProvider(loadAddressFromCsvFile(new File ("address.txt"))).iterator();
-		
+	if (formattext.equals("xml")){
+	return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
+	}else if  (formattext.equals("csv")){
+	return wrapAddressDateForProvider(loadAddressFromCsvFile(new File ("address.txt"))).iterator();	
+	}else return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
 	}
 	
 	protected List<Object[]> wrapAddressDateForProvider(List<AddressDate> address) {

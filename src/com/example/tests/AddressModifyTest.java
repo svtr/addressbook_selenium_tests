@@ -17,14 +17,14 @@ public class AddressModifyTest extends TestBase{
 
 	
 	 //save old list
-	SortedListOf<AddressDate> oldList = app.getAddressHelper().GetAddress();
+	SortedListOf<AddressDate> oldList = app.getAddressHelper().GetContacts();
 	Random rnd = new Random();
 	int index = rnd.nextInt(oldList.size()-1);
 	app.getAddressHelper().modifyAddress(index,address);  
 
 	
 	 //save new list
-	SortedListOf<AddressDate> newList = app.getAddressHelper().GetAddress();
+	SortedListOf<AddressDate> newList = app.getAddressHelper().GetContacts();
 	
     assertThat(newList, equalTo(oldList.without(index).withAdded(address)));
 

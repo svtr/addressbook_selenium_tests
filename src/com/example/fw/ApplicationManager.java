@@ -11,6 +11,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 //import com.example.tests.TestBase;
 
+
+
 public class ApplicationManager {
 	
 
@@ -18,13 +20,11 @@ public class ApplicationManager {
 	public WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
-	
-	
-	
     private GroupHelper grouphelper;
     private AddressHelper adresshelper;
 	private NavigationHelper navigationhelper;
 	private Properties properties;
+	public static String formattext;
     	
 	public ApplicationManager(Properties properties){
 		this.properties=properties; 
@@ -40,12 +40,13 @@ public class ApplicationManager {
 		}
 		baseUrl = properties.getProperty("baseUrl");
 //		 baseUrl = "http://localhost";
-		 driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);	
+		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
 //       Нинициализация  	
 //		 navigationhelper = new NavigationHelper(this); 
 //		 adresshelper = new AddressHelper(this);
 //		 grouphelper = new GroupHelper(this);
 		 driver.get(baseUrl);
+		 formattext = properties.getProperty("formattext");
 	}
 	
 	

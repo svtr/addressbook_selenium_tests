@@ -31,14 +31,19 @@ public class NavigationHelper  extends HelperBase{
 	}
 	public NavigationHelper gotoPage(String namepage) {
 	
-		if ((namepage =="groups")&&(!onGroupPage())){
+		if (namepage =="groups")
+//				&&(!onGroupPage()))
+		                            {
 			click(By.linkText("groups"));
 			}
-			if ((namepage =="home page")&&!onMainPage())
+			if (namepage =="home page")
+//				  &&!onMainPage())
 			{
 			click(By.linkText("home page"));
 			}
-			if ((namepage =="group page")&&(!onGroupPage())){
+			if (namepage =="group page")
+//					&&(!onGroupPage()))
+			{
 				driver.findElement(By.linkText(namepage)).click();
 			}
 			return this;

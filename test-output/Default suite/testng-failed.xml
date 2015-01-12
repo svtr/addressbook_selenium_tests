@@ -9,11 +9,11 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.example.tests.AddressModifyTest -->
-      <class name="com.example.tests.AdressCreateTest">
+      <class name="com.example.tests.AddressRemoveTest">
         <methods>
-          <include name="testAddressCreationwithValidData" invocation-numbers="0"/>
+          <include name="deleteAddress" invocation-numbers="1 2 3 4"/>
         </methods>
-      </class> <!-- com.example.tests.AdressCreateTest -->
+      </class> <!-- com.example.tests.AddressRemoveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

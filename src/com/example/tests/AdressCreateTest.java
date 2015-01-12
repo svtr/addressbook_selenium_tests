@@ -21,11 +21,11 @@ public class AdressCreateTest extends TestBase{
   public void testAddressCreationwithValidData(AddressDate address) throws Exception {
     
       //save old list
-	  SortedListOf<AddressDate> oldList = app.getAddressHelper().GetAddress();
+	  SortedListOf<AddressDate> oldList = app.getAddressHelper().GetContacts();
 	  //action
       app.getAddressHelper().createAddress(address);
       //save new list
-      SortedListOf<AddressDate> newList = app.getAddressHelper().GetAddress();
+      SortedListOf<AddressDate> newList = app.getAddressHelper().GetContacts();
       //compare
  	  assertThat(newList, equalTo(oldList.withAdded(address)));
   }

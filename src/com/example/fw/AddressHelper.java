@@ -29,7 +29,7 @@ public class AddressHelper extends HelperBase {
 	    fillFormAddress(address, CREATION);
 	    submitFormCreateAddress();
 	    manager.navigateTO().gotoPage("home page");
-	    rebuildCache();
+	    rebuildCacheAddress();
 	    return this;
 	}
 	
@@ -38,7 +38,7 @@ public class AddressHelper extends HelperBase {
 		fillFormAddress(address, MODIFICATION);
 		updateAddressForm();
 		manager.navigateTO().gotoPage("home page");
-		rebuildCache();
+		rebuildCacheAddress();
 		return this;
 	}
 
@@ -47,24 +47,24 @@ public class AddressHelper extends HelperBase {
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
 	    manager.navigateTO().gotoPage("home page");
-	    rebuildCache();
+	    rebuildCacheAddress();
 		return this;
 	}
 	
 	
 	private SortedListOf<AddressDate> cachedAddress;
 
-	public SortedListOf<AddressDate> GetAddress() {
+	public SortedListOf<AddressDate> GetContacts() {
 		 
 		    if (cachedAddress == null){
-		    rebuildCache();
+		    rebuildCacheAddress();
 		    } 
 		    return new SortedListOf<AddressDate>(cachedAddress);
 	//	    return cachedAddress;
 		
 		}
 	
-	public void rebuildCache() {
+	public void rebuildCacheAddress() {
 
 		cachedAddress =  new SortedListOf<AddressDate>();
 		manager.navigateTO().mainPage();;
