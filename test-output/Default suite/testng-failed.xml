@@ -7,11 +7,17 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="modifyAddress" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.example.tests.AddressModifyTest -->
+      <class name="com.example.tests.GroupeMidifyTest">
+        <methods>
+          <include name="modifyGroup" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.example.tests.GroupeMidifyTest -->
       <class name="com.example.tests.AddressRemoveTest">
         <methods>
-          <include name="deleteAddress" invocation-numbers="1 2 3 4"/>
+          <include name="deleteAddress" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.example.tests.AddressRemoveTest -->
     </classes>
