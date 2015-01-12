@@ -46,6 +46,7 @@ public class AddressHelper extends HelperBase {
 		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+2)
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
+		cachedAddress = null;
 	    manager.navigateTO().gotoPage("home page");
 	    rebuildCacheAddress();
 		return this;
@@ -64,7 +65,7 @@ public class AddressHelper extends HelperBase {
 		
 		}
 	
-	public void rebuildCacheAddress() {
+	public AddressHelper rebuildCacheAddress() {
 
 		cachedAddress =  new SortedListOf<AddressDate>();
 		manager.navigateTO().mainPage();;
@@ -85,21 +86,25 @@ public class AddressHelper extends HelperBase {
             cachedAddress.add(new AddressDate().withLastName(lastname).withFname(fname).withEmail(email).withHome(home));
 			
 		}
+		return this;
 	
     }
 //---------------------------------------------------------------------------------------------	
 	
-	private void submitFormCreateAddress() {
+	private AddressHelper submitFormCreateAddress() {
 		driver.findElement(By.name("submit")).click();
+		cachedAddress = null;
+		return this;
 		
 	}
 
-	private void gotoCreateAddress() {
+	private AddressHelper gotoCreateAddress() {
 		driver.findElement(By.linkText("add new")).click();
+		return this;
 		
 	}
 
-	public void fillFormAddress(AddressDate addr , boolean formType) {
+	public AddressHelper fillFormAddress(AddressDate addr , boolean formType) {
 		if (addr.getFname() != null) {
 			type(By.name("firstname"), addr.getFname());
 		}
@@ -161,6 +166,7 @@ public class AddressHelper extends HelperBase {
 		if (!addr.getPhone2().equals(" ")) {
 			type(By.name("phone2"), addr.getPhone2());
 		}
+		return this;
 
 	}
 
@@ -179,6 +185,7 @@ public class AddressHelper extends HelperBase {
 
 	public AddressHelper updateAddressForm() {
 		click(By.xpath(".//*[@id='content']/form[1]/input[11]"));
+		cachedAddress = null;
 		return this;
 	}
 	

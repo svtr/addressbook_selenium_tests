@@ -18,7 +18,7 @@ public GroupHelper createGroup(GroupDate group) {
     	fillGroupForm(group);
         submitForm();
     	manager.navigateTO().gotoPage("group page");
-    	rebuildCache();
+    	rebuildCacheGroups();
     	return this;
 		
 	}
@@ -29,15 +29,16 @@ public GroupHelper modifyGroup(GroupDate group, int index) {
 		fillGroupForm(group);
 		submitGroupForm();
 		manager.navigateTO().gotoPage("group page");
-		rebuildCache();
+		rebuildCacheGroups();
 		return this;
 	}	
 	
 public GroupHelper deletegroupe(int index) {
 		selectGroupeByIndex(index);
 		submitGroupDelete();
+		cachedGroups = null;
 		manager.navigateTO().gotoPage("group page");
-		rebuildCache();
+		rebuildCacheGroups();
 		return this;
 		
 	}
@@ -47,12 +48,12 @@ private SortedListOf<GroupDate> cachedGroups;
 public SortedListOf<GroupDate> GetGroups() {
 	 
 	    if (cachedGroups == null){
-	    rebuildCache();
+	    rebuildCacheGroups();
 	    } 
 	    return new SortedListOf<GroupDate>(cachedGroups);
 		
 	}
-private void rebuildCache() {
+private void rebuildCacheGroups() {
  
 	    cachedGroups =  new SortedListOf<GroupDate>();
 		manager.navigateTO().gotoPage("groups");
