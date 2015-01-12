@@ -11,7 +11,7 @@ import com.example.utils.SortedListOf;
 
 public class AddressModifyTest extends TestBase{
 
-	@Test(dataProvider = "randomValidAddressGenerator")
+	@Test(dataProvider = "addressFromFile")
 	public void modifyAddress(AddressDate address) throws Exception{
 	
 

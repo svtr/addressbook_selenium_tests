@@ -11,7 +11,7 @@ import com.example.utils.SortedListOf;
 public class AddressRemoveTest extends TestBase{
 
 	
-	 @Test(dataProvider = "randomValidAddressGenerator")
+	 @Test(dataProvider = "addressFromFile")
     	public void deleteAddress(AddressDate address) {
         
 

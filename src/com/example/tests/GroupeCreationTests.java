@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 
 import com.example.utils.*;
 
-import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
+//import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromXmlFile;
 import static org.testng.Assert.assertEquals;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -17,12 +18,7 @@ import static org.junit.Assert.assertThat;
 public class GroupeCreationTests extends TestBase{
 
 	
-	@DataProvider
-	public Iterator<Object[]> groupsFromFile() throws Exception {
-	//....
-	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("groups.txt"))).iterator();
-		
-	}
+	
 	
 
 

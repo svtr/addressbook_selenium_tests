@@ -49,7 +49,7 @@ public SortedListOf<GroupDate> GetGroups() {
 	    if (cachedGroups == null){
 	    rebuildCache();
 	    } 
-	    return cachedGroups;
+	    return new SortedListOf<GroupDate>(cachedGroups);
 		
 	}
 private void rebuildCache() {

@@ -12,7 +12,7 @@ import static org.junit.Assert.assertThat;
 
 
 
-@Test(dataProvider = "randomValidGroupGenerator")
+@Test(dataProvider = "groupsFromFile")
 public class GroupeMidifyTest extends TestBase{
 
 	       

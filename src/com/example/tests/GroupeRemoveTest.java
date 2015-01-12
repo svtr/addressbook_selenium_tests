@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class GroupeRemoveTest extends TestBase {
 
-	@Test(dataProvider = "randomValidGroupGenerator")
+	@Test(dataProvider = "groupsFromFile")
 	public void deleteGroup(GroupDate group) {
 		
 	    // save old

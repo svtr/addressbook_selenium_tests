@@ -15,6 +15,12 @@ import com.example.fw.ApplicationManager;
 
 import static com.example.tests.GroupDataGenerator.generateRandomGroups;
 import static com.example.tests.GroupDataGenerator.generateRandomString;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromXmlFile;
+import static com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile;
+
+import static com.example.tests.AddressDataGenerator.generateRandomAddress;
+import static com.example.tests.AddressDataGenerator.loadAddressFromCsvFile;
+
 //import org.apache.bcel.generic.Select;
 
 
@@ -65,26 +71,51 @@ public class TestBase {
 
 	@DataProvider
 	public Iterator<Object[]> randomValidAddressGenerator(){
-		
-	List<Object[]> list =  new ArrayList<Object[]>();
+	return wrapAddressDateForProvider(generateRandomAddress(5)).iterator();	
+	}
 	
-	for (int i = 0; i<5; i++)
-	{
-		 AddressDate address = new AddressDate()
-		 .withLastName (generateRandomString())
-		 .withFname(generateRandomString())
-		 .withAddress(generateRandomString())
-		 .withHome(generateRandomString())
-		 .withMobile(generateRandomString())
-		 .withWork(generateRandomString())
-		 .withEmail(generateRandomString())
-		 .withEmail2(generateRandomString())
-		 .withbDay("1")
-		 .withbMounth("January")
-		 .withbYear("1980")
-		 .withGroupDate("group1")
-		 .withAddress2(generateRandomString())
-		 .withPhone2(generateRandomString());
+	@DataProvider
+	public Iterator<Object[]> groupsFromFile() throws Exception {
+	//....
+	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("group.txt"))).iterator();
+		
+	}
+	
+	
+	@DataProvider
+	public Iterator<Object[]> addressFromFile() throws Exception {
+	//....
+	return wrapAddressDateForProvider(loadAddressFromCsvFile(new File ("address.txt"))).iterator();
+		
+	}
+	
+	protected List<Object[]> wrapAddressDateForProvider(List<AddressDate> address) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		for (AddressDate adr :address) {
+			list.add(new Object[]{adr});
+		}
+		return list;
+	}
+		
+//	List<Object[]> list =  new ArrayList<Object[]>();
+	
+//	for (int i = 0; i<5; i++)
+//	{
+//		 AddressDate address = new AddressDate()
+//		 .withLastName (generateRandomString()) +
+//		 .withFname(generateRandomString()) +
+//		 .withAddress(generateRandomString()) +
+//		 .withHome(generateRandomString()) +
+//		 .withMobile(generateRandomString()) +
+//		 .withWork(generateRandomString()) +
+//		 .withEmail(generateRandomString()) +
+//		 .withEmail2(generateRandomString()) +
+//		 .withbDay("1")
+//		 .withbMounth("January")
+//		 .withbYear("1980")
+//		 .withGroupDate("group1")
+//		 .withAddress2(generateRandomString()) +
+//		 .withPhone2(generateRandomString());
 //		 address.lastname =  generateRandomString();
 //		 address.fname =  generateRandomString();
 //         address.address =  generateRandomString();
@@ -99,15 +130,14 @@ public class TestBase {
 //       address.groupdate = "group1";
 //		 address.address2 =  generateRandomString();
 //		 address.phone2 =  generateRandomString();
-         list.add(new Object[]{address});
+ //        list.add(new Object[]{address});
 		
-	}
+//	}
 	
 	
 	//....
-	return list.iterator();
+//	return list.iterator();
 		
-	}
 	
 
 	

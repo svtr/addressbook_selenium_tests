@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 09 00:29:28 GMT+03:00 2015</td>
+<td>Started on:</td><td>Mon Jan 12 15:20:25 FET 2015</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5904 ms)</td>
+<tr><td>Total time:</td><td>230 seconds (230917 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,210 +67,73 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.tests.GroupeCreationTests.setUp()'><b>setUp</b><br>Test class: com.example.tests.GroupeCreationTests</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: f.QueryInterface is not a function
-Command duration or timeout: 11 milliseconds
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;Kolosov-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_25&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: f0cd698f-bc31-425d-bc76-0c9515693efd
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at com.example.fw.ApplicationManager.&lt;init&gt;(ApplicationManager.java:48)
-	at com.example.tests.TestBase.setUp(TestBase.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: f.QueryInterface is not a function
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;Kolosov-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.get(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9504:13)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640:7)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace24386925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace24386925'><pre>org.openqa.selenium.WebDriverException: f.QueryInterface is not a function
-Command duration or timeout: 11 milliseconds
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;Kolosov-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_25&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=34.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: f0cd698f-bc31-425d-bc76-0c9515693efd
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at com.example.fw.ApplicationManager.&lt;init&gt;(ApplicationManager.java:48)
-	at com.example.tests.TestBase.setUp(TestBase.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: f.QueryInterface is not a function
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:02:37&apos;
-System info: host: &apos;Kolosov-PC&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_25&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.get(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9504:13)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11640:7)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/Kolosov/AppData/Local/Temp/anonymous7302637610601747532webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11582:5)
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.example.tests.GroupeCreationTests.tearDown()'><b>tearDown</b><br>Test class: com.example.tests.GroupeCreationTests</td>
+<td title='com.example.tests.AddressRemoveTest.deleteAddress()'><b>deleteAddress</b><br>Test class: com.example.tests.AddressRemoveTest<br>Parameters: AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]</td>
 <td></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>21</td>
+<td>com.example.tests.AddressRemoveTest@7006c658</td></tr>
 <tr>
-<td title='com.example.tests.GroupeCreationTests.testGroupCreationwithValidData()'><b>testGroupCreationwithValidData</b><br>Test class: com.example.tests.GroupeCreationTests</td>
-<td><div><pre>java.lang.RuntimeException: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
-	at java.io.FileInputStream.open(Native Method)
-	at java.io.FileInputStream.&lt;init&gt;(Unknown Source)
-	at java.io.FileReader.&lt;init&gt;(Unknown Source)
-	at com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile(GroupDataGenerator.java:41)
-	at com.example.tests.GroupeCreationTests.groupsFromFile(GroupeCreationTests.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
-	... 20 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace2498190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2498190'><pre>java.lang.RuntimeException: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: java.io.FileNotFoundException: groups.txt (Не удается найти указанный файл)
-	at java.io.FileInputStream.open(Native Method)
-	at java.io.FileInputStream.&lt;init&gt;(Unknown Source)
-	at java.io.FileReader.&lt;init&gt;(Unknown Source)
-	at com.example.tests.GroupDataGenerator.loadGroupsFromCsvFile(GroupDataGenerator.java:41)
-	at com.example.tests.GroupeCreationTests.groupsFromFile(GroupeCreationTests.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
-	... 20 more
-</pre></div></td>
-<td>0</td>
-<td>com.example.tests.GroupeCreationTests@82ba1e</td></tr>
+<td title='com.example.tests.AddressRemoveTest.deleteAddress()'><b>deleteAddress</b><br>Test class: com.example.tests.AddressRemoveTest<br>Parameters: AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]</td>
+<td></td>
+<td>22</td>
+<td>com.example.tests.AddressRemoveTest@7006c658</td></tr>
+<tr>
+<td title='com.example.tests.GroupeRemoveTest.deleteGroup()'><b>deleteGroup</b><br>Test class: com.example.tests.GroupeRemoveTest<br>Parameters: GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]</td>
+<td></td>
+<td>4</td>
+<td>com.example.tests.GroupeRemoveTest@7cdbc5d3</td></tr>
+<tr>
+<td title='com.example.tests.GroupeRemoveTest.deleteGroup()'><b>deleteGroup</b><br>Test class: com.example.tests.GroupeRemoveTest<br>Parameters: GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]</td>
+<td></td>
+<td>4</td>
+<td>com.example.tests.GroupeRemoveTest@7cdbc5d3</td></tr>
+<tr>
+<td title='com.example.tests.AddressModifyTest.modifyAddress()'><b>modifyAddress</b><br>Test class: com.example.tests.AddressModifyTest<br>Parameters: AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]</td>
+<td></td>
+<td>27</td>
+<td>com.example.tests.AddressModifyTest@77f03bb1</td></tr>
+<tr>
+<td title='com.example.tests.AddressModifyTest.modifyAddress()'><b>modifyAddress</b><br>Test class: com.example.tests.AddressModifyTest<br>Parameters: AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]</td>
+<td></td>
+<td>25</td>
+<td>com.example.tests.AddressModifyTest@77f03bb1</td></tr>
+<tr>
+<td title='com.example.tests.GroupeMidifyTest.modifyGroup()'><b>modifyGroup</b><br>Test class: com.example.tests.GroupeMidifyTest<br>Parameters: GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]</td>
+<td></td>
+<td>5</td>
+<td>com.example.tests.GroupeMidifyTest@33a10788</td></tr>
+<tr>
+<td title='com.example.tests.GroupeMidifyTest.modifyGroup()'><b>modifyGroup</b><br>Test class: com.example.tests.GroupeMidifyTest<br>Parameters: GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]</td>
+<td></td>
+<td>5</td>
+<td>com.example.tests.GroupeMidifyTest@33a10788</td></tr>
+<tr>
+<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]</td>
+<td></td>
+<td>54</td>
+<td>com.example.tests.AdressCreateTest@34033bd0</td></tr>
+<tr>
+<td title='com.example.tests.AdressCreateTest.testAddressCreationwithValidData()'><b>testAddressCreationwithValidData</b><br>Test class: com.example.tests.AdressCreateTest<br>Parameters: AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]</td>
+<td></td>
+<td>29</td>
+<td>com.example.tests.AdressCreateTest@34033bd0</td></tr>
+<tr>
+<td title='com.example.tests.GroupeCreationTests.testGroupCreationwithValidData()'><b>testGroupCreationwithValidData</b><br>Test class: com.example.tests.GroupeCreationTests<br>Parameters: GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]</td>
+<td></td>
+<td>8</td>
+<td>com.example.tests.GroupeCreationTests@47fd17e3</td></tr>
+<tr>
+<td title='com.example.tests.GroupeCreationTests.testGroupCreationwithValidData()'><b>testGroupCreationwithValidData</b><br>Test class: com.example.tests.GroupeCreationTests<br>Parameters: GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]</td>
+<td></td>
+<td>5</td>
+<td>com.example.tests.GroupeCreationTests@47fd17e3</td></tr>
 </table><p>
 </body>
 </html>

@@ -40,7 +40,7 @@ public class ApplicationManager {
 		}
 		baseUrl = properties.getProperty("baseUrl");
 //		 baseUrl = "http://localhost";
-//		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+		 driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);	
 //       Нинициализация  	
 //		 navigationhelper = new NavigationHelper(this); 
 //		 adresshelper = new AddressHelper(this);

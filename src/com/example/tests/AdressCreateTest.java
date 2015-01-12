@@ -1,14 +1,23 @@
 package com.example.tests;
 
+
 import static org.hamcrest.Matchers.equalTo;
+
+
 import com.example.utils.*;
+
+
 import org.testng.annotations.Test;
+
 import static org.junit.Assert.assertThat;
 
 
 public class AdressCreateTest extends TestBase{
+	
+	
+
  
-  @Test(dataProvider = "randomValidAddressGenerator")
+  @Test(dataProvider = "addressFromFile")
   public void testAddressCreationwithValidData(AddressDate address) throws Exception {
     
       //save old list

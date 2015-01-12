@@ -6,10 +6,12 @@ package com.example.fw;
 import java.util.List;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.example.tests.AddressDate;
+import com.example.tests.GroupDate;
 import com.example.utils.SortedListOf;
 
 
@@ -57,8 +59,9 @@ public class AddressHelper extends HelperBase {
 		    if (cachedAddress == null){
 		    rebuildCache();
 		    } 
-		    return cachedAddress;
-			
+		    return new SortedListOf<AddressDate>(cachedAddress);
+	//	    return cachedAddress;
+		
 		}
 	
 	public void rebuildCache() {
