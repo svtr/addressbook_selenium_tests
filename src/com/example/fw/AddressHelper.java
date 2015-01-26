@@ -9,13 +9,11 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.example.tests.AddressDate;
-import com.example.tests.GroupDate;
 import com.example.utils.SortedListOf;
 
 
-public class AddressHelper extends HelperBase {
+public class AddressHelper extends WebDriverHelperBase {
 
     public static boolean CREATION=true;
     public static boolean MODIFICATION = false;

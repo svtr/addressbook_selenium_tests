@@ -17,7 +17,7 @@ public class ApplicationManager {
 	
 
 	//protected ApplicationManager app;
-	public WebDriver driver;
+	protected WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
     private GroupHelper grouphelper;

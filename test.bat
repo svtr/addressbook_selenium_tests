@@ -1,1 +1,0 @@
-java -cp bin;d:\Java_for_testers\distr\xstream-1.4.7\xstream-1.4.7.jar;d:\Java_for_testers\distr\xstream-1.4.7\xpp3_min-1.1.4c.jar com.example.tests.GroupDataGenerator 10 groups.txt csv

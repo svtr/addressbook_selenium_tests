@@ -1,1 +1,3 @@
-java -cp bin;d:\Java_for_testers\distr\xstream-1.4.7\xstream-1.4.7.jar;d:\Java_for_testers\distr\xstream-1.4.7\lib\xstream\xmlpull-1.1.3.1.jar;d:\Java_for_testers\distr\xstream-1.4.7\xpp3_min-1.1.4c.jar; d:\Java_for_testers\distr\selenium-server-standalone-2.44.0.jar org.testng.TestNg testng-customsuite.xml
+cd /d d:\GitHub\adressbook_selenium_test\addressbook_selenium_tests\
+java -cp c:\tools\xstream-1.4.7\lib\xstream-1.4.7.jar;c:\tools\xstream-1.4.7\lib\xstream\xpp3_min-1.1.4c.jar com.example.tests.GroupDataGenerator 10 groups.txt csv
+pause
