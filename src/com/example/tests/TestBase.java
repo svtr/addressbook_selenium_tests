@@ -60,9 +60,9 @@ public class TestBase {
 	
 	
 	
-	protected List<Object[]> wrapGroupDateForProvider(List<GroupDate> groups) {
+	protected List<Object[]> wrapGroupDateForProvider(List<GroupData> groups) {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (GroupDate group :groups) {
+		for (GroupData group :groups) {
 			list.add(new Object[]{group});
 		}
 		return list;
@@ -96,9 +96,9 @@ public class TestBase {
 	}else return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
 	}
 	
-	protected List<Object[]> wrapAddressDateForProvider(List<AddressDate> address) {
+	protected List<Object[]> wrapAddressDateForProvider(List<AddressData> address) {
 		List<Object[]> list = new ArrayList<Object[]>();
-		for (AddressDate adr :address) {
+		for (AddressData adr :address) {
 			list.add(new Object[]{adr});
 		}
 		return list;

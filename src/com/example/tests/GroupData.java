@@ -1,16 +1,16 @@
 package com.example.tests;
 
-public class GroupDate implements Comparable<GroupDate>{
+public class GroupData implements Comparable<GroupData>{
 	private String id;
 	private String groupname;
 	private String header;
 	private String footer;
 
-	public GroupDate() {
+	public GroupData() {
 		
 	}
 	
-	public GroupDate(String groupname, String header, String footer) {
+	public GroupData(String groupname, String header, String footer) {
 		this.groupname = groupname;
 		this.header = header;
 		this.footer = footer;
@@ -36,7 +36,7 @@ public class GroupDate implements Comparable<GroupDate>{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		GroupDate other = (GroupDate) obj;
+		GroupData other = (GroupData) obj;
 		if (groupname == null) {
 			if ((other.groupname != null)||(!other.groupname.equals("")))
 				return false;
@@ -46,29 +46,29 @@ public class GroupDate implements Comparable<GroupDate>{
 	}
 
 	@Override
-	public int compareTo(GroupDate other) {
+	public int compareTo(GroupData other) {
 
 		
 		return this.groupname.toLowerCase().compareTo(other.groupname.toLowerCase());
 	}
 
-	public GroupDate withGroupName(String groupname) {
+	public GroupData withGroupName(String groupname) {
 		this.groupname = groupname;
 		return this;
 	}
 	
-	public GroupDate withId(String id) {
+	public GroupData withId(String id) {
 		this.id = id;
 		return this;
 	}
 
 
-	public GroupDate withHeader(String header) {
+	public GroupData withHeader(String header) {
 		this.header = header;
 		return this;
 	}
 
-	public GroupDate withFooter(String footer) {
+	public GroupData withFooter(String footer) {
 		this.footer = footer;
 		return this;
 	}
@@ -87,6 +87,15 @@ public class GroupDate implements Comparable<GroupDate>{
 
 	public void setHeader(String header) {
 		this.header = header;
+	}
+	
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getFooter() {

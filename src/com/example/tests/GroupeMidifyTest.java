@@ -16,17 +16,17 @@ import static org.junit.Assert.assertThat;
 public class GroupeMidifyTest extends TestBase{
 
 	       
-        public void modifyGroup(GroupDate group) {
+        public void modifyGroup(GroupData group) {
 //        	app.navigateTO().mainPage().gotoPage("groups");
       		//save old
-            SortedListOf<GroupDate> oldList = app.getGroupHelper().GetGroups();
+            SortedListOf<GroupData> oldList = app.getGroupHelper().GetGroups();
             Random rnd = new Random();
     	    int index = rnd.nextInt(oldList.size()-1);
             
     	    app.getGroupHelper().modifyGroup(group, index);
 
     	    //save new list
-            SortedListOf<GroupDate>  newlist= app.getGroupHelper().GetGroups();    
+            SortedListOf<GroupData>  newlist= app.getGroupHelper().GetGroups();    
             //compare
             assertThat(newlist, equalTo(oldList.without(index).withAdded(group)));
 

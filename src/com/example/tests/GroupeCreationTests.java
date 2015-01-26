@@ -23,16 +23,16 @@ public class GroupeCreationTests extends TestBase{
 
 
 @Test(dataProvider = "groupsFromFile")
-  public void testGroupCreationwithValidData(GroupDate group) throws Exception {
+  public void testGroupCreationwithValidData(GroupData group) throws Exception {
 //      app.navigateTO().mainPage();
 //      app.navigateTO().gotoPage("groups");
 	   //save old
-      SortedListOf<GroupDate> oldList = app.getGroupHelper().GetGroups();
+      SortedListOf<GroupData> oldList = app.getGroupHelper().GetGroups();
 
       app.getGroupHelper().createGroup(group);
      
       
-      SortedListOf<GroupDate>  newlist= app.getGroupHelper().GetGroups();      
+      SortedListOf<GroupData>  newlist= app.getGroupHelper().GetGroups();      
  
       assertEquals(newlist.size(),oldList.size()+1);
 	  assertThat(newlist, equalTo(oldList.withAdded(group)));

@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import com.example.tests.AddressDate;
+import com.example.tests.AddressData;
 import com.example.utils.SortedListOf;
 
 
@@ -22,7 +22,7 @@ public class AddressHelper extends WebDriverHelperBase {
 		super(manager);
 	}
 
-	public AddressHelper createAddress(AddressDate address) {
+	public AddressHelper createAddress(AddressData address) {
 		gotoCreateAddress();
 	    fillFormAddress(address, CREATION);
 	    submitFormCreateAddress();
@@ -31,7 +31,7 @@ public class AddressHelper extends WebDriverHelperBase {
 	    return this;
 	}
 	
-	public AddressHelper modifyAddress(int index, AddressDate address) {
+	public AddressHelper modifyAddress(int index, AddressData address) {
 		initmodifyaddress(index);
 		fillFormAddress(address, MODIFICATION);
 		updateAddressForm();
@@ -51,21 +51,21 @@ public class AddressHelper extends WebDriverHelperBase {
 	}
 	
 	
-	private SortedListOf<AddressDate> cachedAddress;
+	private SortedListOf<AddressData> cachedAddress;
 
-	public SortedListOf<AddressDate> GetContacts() {
+	public SortedListOf<AddressData> GetContacts() {
 		 
 		    if (cachedAddress == null){
 		    rebuildCacheAddress();
 		    } 
-		    return new SortedListOf<AddressDate>(cachedAddress);
+		    return new SortedListOf<AddressData>(cachedAddress);
 	//	    return cachedAddress;
 		
 		}
 	
 	public AddressHelper rebuildCacheAddress() {
 
-		cachedAddress =  new SortedListOf<AddressDate>();
+		cachedAddress =  new SortedListOf<AddressData>();
 		manager.navigateTO().mainPage();;
 //	    List<AddressDate> addrs = new ArrayList<AddressDate>();
 		List<WebElement> table = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr[position()>1 and position()!=last()]"));
@@ -81,7 +81,7 @@ public class AddressHelper extends WebDriverHelperBase {
             String home = td.findElement(By.xpath(".//td[5]")).getText();
             home = replaceNullOrEmpty(home);
             home=home.replaceAll("[ ]", "");
-            cachedAddress.add(new AddressDate().withLastName(lastname).withFname(fname).withEmail(email).withHome(home));
+            cachedAddress.add(new AddressData().withLastName(lastname).withFname(fname).withEmail(email).withHome(home));
 			
 		}
 		return this;
@@ -102,7 +102,7 @@ public class AddressHelper extends WebDriverHelperBase {
 		
 	}
 
-	public AddressHelper fillFormAddress(AddressDate addr , boolean formType) {
+	public AddressHelper fillFormAddress(AddressData addr , boolean formType) {
 		if (addr.getFname() != null) {
 			type(By.name("firstname"), addr.getFname());
 		}

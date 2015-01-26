@@ -2,7 +2,7 @@ package com.example.tests;
 
 
 
-public class AddressDate implements Comparable<AddressDate> {
+public class AddressData implements Comparable<AddressData> {
 	private String lastname;
 	private String fname;
 	private String address;
@@ -18,11 +18,11 @@ public class AddressDate implements Comparable<AddressDate> {
 	private String address2;
 	private String phone2;
 
-	public AddressDate() {
+	public AddressData() {
 
 	}
 
-	public AddressDate( String lastname, String fname, String address,
+	public AddressData( String lastname, String fname, String address,
 			String home, String mobile, String work, String email,
 			String email2, String bday, String bmonth, String byear,
 			String groupdate, String address2, String phone2) {
@@ -74,7 +74,7 @@ public class AddressDate implements Comparable<AddressDate> {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AddressDate other = (AddressDate) obj;
+		AddressData other = (AddressData) obj;
 		if (email == null) {
 			if (other.email != null)
 				return false;
@@ -112,7 +112,7 @@ public class AddressDate implements Comparable<AddressDate> {
 	}
 
 	@Override
-	public int compareTo(AddressDate other) {
+	public int compareTo(AddressData other) {
      
 		int result = this.lastname.toLowerCase().compareTo(other.lastname.toLowerCase());
 		if (result == 0) result = this.fname.toLowerCase().compareTo(other.fname.toLowerCase());
@@ -130,73 +130,73 @@ public class AddressDate implements Comparable<AddressDate> {
     
 	}
 
-	public AddressDate withLastName(String lastname) {
+	public AddressData withLastName(String lastname) {
 		this.lastname = lastname;
 		return this;
 		
 	}
 
-	public AddressDate withFname(String fname) {
+	public AddressData withFname(String fname) {
 		this.fname = fname;
 		return this;
 	}
 
-	public AddressDate withAddress(String address) {
+	public AddressData withAddress(String address) {
 		this.address = address;
 		return this;
 	}
 
-	public AddressDate withHome(String home) {
+	public AddressData withHome(String home) {
 		this.home = home;
 		return this;
 	}
 
-	public AddressDate withMobile(String mobile) {
+	public AddressData withMobile(String mobile) {
 		this.mobile = mobile;
 		return this;
 	}
 
-	public AddressDate withWork(String work) {
+	public AddressData withWork(String work) {
 		this.work = work;
 		return this;
 	}
 
-	public AddressDate withEmail(String email) {
+	public AddressData withEmail(String email) {
 		this.email = email;
 		return this;
 	}
 
-	public AddressDate withEmail2(String email2) {
+	public AddressData withEmail2(String email2) {
 		this.email2 = email2;
 		return this;
 	}
 
-	public AddressDate withbDay(String bday) {
+	public AddressData withbDay(String bday) {
 		this.bday = bday;
 		return this;
 	}
 
-	public AddressDate withbMounth(String bmonth) {
+	public AddressData withbMounth(String bmonth) {
 		this.bmonth = bmonth;
 		return this;
 	}
 
-	public AddressDate withbYear(String byear) {
+	public AddressData withbYear(String byear) {
 		this.byear = byear;
 		return this;
 	}
 
-	public AddressDate withGroupDate(String groupdate) {
+	public AddressData withGroupDate(String groupdate) {
 		this.groupdate = groupdate;
 		return this;
 	}
 
-	public AddressDate withAddress2(String address2) {
+	public AddressData withAddress2(String address2) {
 		this.address2 = address2;
 		return this;
 	}
 
-	public AddressDate withPhone2(String phone2) {
+	public AddressData withPhone2(String phone2) {
 		this.phone2 = phone2;
 		return this;
 	}

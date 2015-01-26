@@ -3,7 +3,7 @@ package com.example.fw;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import com.example.tests.GroupDate;
+import com.example.tests.GroupData;
 import com.example.utils.*;
 
 public class GroupHelper extends WebDriverHelperBase {
@@ -12,7 +12,7 @@ public class GroupHelper extends WebDriverHelperBase {
 		super(manager);
 		}
 
-public GroupHelper createGroup(GroupDate group) {
+public GroupHelper createGroup(GroupData group) {
      	manager.navigateTO().gotoPage("groups");
     	newGroupCreation();
     	fillGroupForm(group);
@@ -24,7 +24,7 @@ public GroupHelper createGroup(GroupDate group) {
 	}
 	
 
-public GroupHelper modifyGroup(GroupDate group, int index) {
+public GroupHelper modifyGroup(GroupData group, int index) {
 		initmodifygroupe(index);
 		fillGroupForm(group);
 		submitGroupForm();
@@ -43,19 +43,19 @@ public GroupHelper deletegroupe(int index) {
 		
 	}
 
-private SortedListOf<GroupDate> cachedGroups;
+private SortedListOf<GroupData> cachedGroups;
 
-public SortedListOf<GroupDate> GetGroups() {
+public SortedListOf<GroupData> GetGroups() {
 	 
 	    if (cachedGroups == null){
 	    rebuildCacheGroups();
 	    } 
-	    return new SortedListOf<GroupDate>(cachedGroups);
+	    return new SortedListOf<GroupData>(cachedGroups);
 		
 	}
 private void rebuildCacheGroups() {
  
-	    cachedGroups =  new SortedListOf<GroupDate>();
+	    cachedGroups =  new SortedListOf<GroupData>();
 		manager.navigateTO().gotoPage("groups");
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
@@ -64,7 +64,7 @@ private void rebuildCacheGroups() {
 			groupname =  replaceNullOrEmpty(groupname);
 //			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
 //			group.groupname =  replaceNull(group.groupname);
-	        cachedGroups.add(new GroupDate().withGroupName(groupname));
+	        cachedGroups.add(new GroupData().withGroupName(groupname));
 			
 		}
 	
@@ -80,7 +80,7 @@ private void rebuildCacheGroups() {
 }	
 
 
-	public GroupHelper fillGroupForm(GroupDate group) {
+	public GroupHelper fillGroupForm(GroupData group) {
 		type(By.name("group_name"), group.getGroupname());
 		type(By.name("group_header"), group.getHeader());
 		type(By.name("group_footer"), group.getFooter());

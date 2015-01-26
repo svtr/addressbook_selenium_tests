@@ -12,20 +12,20 @@ import org.testng.annotations.Test;
 import static org.junit.Assert.assertThat;
 
 
-public class AdressCreateTest extends TestBase{
+public class AddressCreateTest extends TestBase{
 	
 	
 
  
   @Test(dataProvider = "addressFromFile")
-  public void testAddressCreationwithValidData(AddressDate address) throws Exception {
+  public void testAddressCreationwithValidData(AddressData address) throws Exception {
     
       //save old list
-	  SortedListOf<AddressDate> oldList = app.getAddressHelper().GetContacts();
+	  SortedListOf<AddressData> oldList = app.getAddressHelper().GetContacts();
 	  //action
       app.getAddressHelper().createAddress(address);
       //save new list
-      SortedListOf<AddressDate> newList = app.getAddressHelper().GetContacts();
+      SortedListOf<AddressData> newList = app.getAddressHelper().GetContacts();
       //compare
  	  assertThat(newList, equalTo(oldList.withAdded(address)));
   }

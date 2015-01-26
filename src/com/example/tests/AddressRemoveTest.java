@@ -12,18 +12,18 @@ public class AddressRemoveTest extends TestBase{
 
 	
 	 @Test(dataProvider = "addressFromFile")
-    	public void deleteAddress(AddressDate address) {
+    	public void deleteAddress(AddressData address) {
         
 
 		
-		SortedListOf<AddressDate> oldList = app.getAddressHelper().GetContacts();
+		SortedListOf<AddressData> oldList = app.getAddressHelper().GetContacts();
 		Random rnd = new Random();
 		int index = rnd.nextInt(oldList.size()-1);
 		
 		
 	    app.getAddressHelper().deleteAddress(index);
 
-	    SortedListOf<AddressDate>  newList= app.getAddressHelper().GetContacts();    
+	    SortedListOf<AddressData>  newList= app.getAddressHelper().GetContacts();    
   	    assertThat(newList, equalTo(oldList.without(index)));
   	   
 	  

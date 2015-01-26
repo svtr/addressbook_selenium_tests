@@ -27,7 +27,7 @@ public class AddressDataGenerator {
      File  file = new File(args[1]);
      String format = args[2];
      
-     List<AddressDate> address = generateRandomAddress(amount);
+     List<AddressData> address = generateRandomAddress(amount);
      if ("csv".equals(format)){
     	 saveAddressToCsvFile(address,file);
      } else if ("xml".equals(format)) {
@@ -40,15 +40,15 @@ public class AddressDataGenerator {
 	}
 
   	
-    public static List<AddressDate> loadAddressFromCsvFile(File file) throws IOException {
-    	List<AddressDate> list =  new ArrayList<AddressDate>();
+    public static List<AddressData> loadAddressFromCsvFile(File file) throws IOException {
+    	List<AddressData> list =  new ArrayList<AddressData>();
     	FileReader reader = new FileReader(file);
     	BufferedReader bufferedreader = new BufferedReader(reader);
     	String line = bufferedreader.readLine();
     	while (line != null) {
 		    String[] part = line.split(",");
 		  
-       		AddressDate address = new AddressDate()
+       		AddressData address = new AddressData()
     		.withLastName(part[0])
     		.withFname(part[1])
     		.withAddress(part[2])
@@ -75,16 +75,16 @@ public class AddressDataGenerator {
     	return list;
 	}
 	
-    public static List<AddressDate> loadAddressFromXmlFile(File file) throws IOException {
+    public static List<AddressData> loadAddressFromXmlFile(File file) throws IOException {
     	XStream xstream = new XStream();
-		xstream.alias("address",AddressDate.class);
-		return (List<AddressDate>) xstream.fromXML(file);
+		xstream.alias("address",AddressData.class);
+		return (List<AddressData>) xstream.fromXML(file);
 		
 	}
     
-	private static void saveAddressToXmlFile(List<AddressDate> address, File file) throws IOException {
+	private static void saveAddressToXmlFile(List<AddressData> address, File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("address",AddressDate.class);
+		xstream.alias("address",AddressData.class);
 		String xml = xstream.toXML(address);
 		FileWriter writer = new FileWriter(file);
 	    writer.write(xml);
@@ -93,9 +93,9 @@ public class AddressDataGenerator {
 		
 	}
 
-	private static void saveAddressToCsvFile(List<AddressDate> address, File file) throws IOException {
+	private static void saveAddressToCsvFile(List<AddressData> address, File file) throws IOException {
 	  FileWriter writer = new FileWriter(file);
-	  for (AddressDate adr : address) {
+	  for (AddressData adr : address) {
 		  writer.write(adr.getLastname()+","+adr.getFname()+","+adr.getAddress()+","+adr.getHome()+","+adr.getMobile()+","+adr.getWork()+","+
 	                   adr.getEmail()+","+adr.getEmail2()+","+adr.getBday()+","+adr.getBmonth()+","+adr.getByear()+","+adr.getGroupdate()+","+
 	                   adr.getAddress2()+","+adr.getPhone2()+",!"+"\n");
@@ -104,12 +104,12 @@ public class AddressDataGenerator {
 		writer.close();
 	}
 
-	public static List<AddressDate> generateRandomAddress(int amount) {
-		List<AddressDate> list =  new ArrayList<AddressDate>();
+	public static List<AddressData> generateRandomAddress(int amount) {
+		List<AddressData> list =  new ArrayList<AddressData>();
 		
 		for (int i = 0; i<amount; i++)
 		{
-			AddressDate adr = new AddressDate()
+			AddressData adr = new AddressData()
 			 .withLastName(generateRandomString())
     		 .withFname(generateRandomString())
     		 .withAddress(generateRandomString())

@@ -17,43 +17,29 @@ public class ApplicationManager {
 	
 
 	//protected ApplicationManager app;
-	protected WebDriver driver;
+	private WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
     private GroupHelper grouphelper;
-    private AddressHelper adresshelper;
+    private AddressHelper addresshelper;
+    private HibernateHelper hibernatehelper;
 	private NavigationHelper navigationhelper;
 	private Properties properties;
 	public static String formattext;
     	
 	public ApplicationManager(Properties properties){
 		this.properties=properties; 
-		String browser = properties.getProperty("browser");
-		if ("firefox".equals(browser)) {
-			driver = new FirefoxDriver();
-		} else if ("ie".equals(browser)){
-			driver = new InternetExplorerDriver();
-		} else if ("chrome".equals(browser)){
-			driver = new ChromeDriver();
-		} else {
-		throw new Error("unsupported browser");
-		}
-		baseUrl = properties.getProperty("baseUrl");
-//		 baseUrl = "http://localhost";
-		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-//       Нинициализация  	
-//		 navigationhelper = new NavigationHelper(this); 
-//		 adresshelper = new AddressHelper(this);
-//		 grouphelper = new GroupHelper(this);
-		 driver.get(baseUrl);
-		 formattext = properties.getProperty("formattext");
+		
+	
 	}
 	
 	
 	public void stop() {
+		   
 		   driver.quit();
 	
 	}
+	
 // лк	
 	public NavigationHelper navigateTO() {
 	if (navigationhelper == null) 
@@ -75,13 +61,59 @@ public class ApplicationManager {
 
 	
 	public AddressHelper getAddressHelper() {
-	if (adresshelper == null) 
+	if (addresshelper == null) 
 	{	
-		adresshelper = new AddressHelper(this);
+		addresshelper = new AddressHelper(this);
 	}
-	return 	adresshelper;
+	return 	addresshelper;
 
 	}
+	
+	public  HibernateHelper getHibernateHelper() {
+		if (hibernatehelper == null) 
+		{	
+			hibernatehelper = new HibernateHelper(this);
+		}
+		return 	hibernatehelper;
+		
+	}
+
+
+
+	public WebDriver getDriver() {
+		
+		String browser = properties.getProperty("browser");
+		if (driver == null) 
+		{	
+			if ("firefox".equals(browser)) {
+				driver = new FirefoxDriver();
+			} else if ("ie".equals(browser)){
+				driver = new InternetExplorerDriver();
+			} else if ("chrome".equals(browser)){
+				driver = new ChromeDriver();
+			} else {
+			throw new Error("unsupported browser");
+			}
+			baseUrl = properties.getProperty("baseUrl");
+//			 baseUrl = "http://localhost";
+			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+//	       Нинициализация  	
+//			 navigationhelper = new NavigationHelper(this); 
+//			 adresshelper = new AddressHelper(this);
+//			 grouphelper = new GroupHelper(this);
+			 driver.get(baseUrl);
+			 formattext = properties.getProperty("formattext");
+		}
+		return 	driver;
+
+		}
+
+
+
+
+
+
+	
 	
 
 }

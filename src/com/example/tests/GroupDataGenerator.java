@@ -23,7 +23,7 @@ public class GroupDataGenerator {
      File  file = new File(args[1]);
      String format = args[2];
      
-     List<GroupDate> groups = generateRandomGroups(amount);
+     List<GroupData> groups = generateRandomGroups(amount);
      if ("csv".equals(format)){
     	 saveGroupsToCsvFile(groups,file);
      } else if ("xml".equals(format)) {
@@ -36,14 +36,14 @@ public class GroupDataGenerator {
 	}
 
   	
-    public static List<GroupDate> loadGroupsFromCsvFile(File file) throws IOException {
-    	List<GroupDate> list =  new ArrayList<GroupDate>();
+    public static List<GroupData> loadGroupsFromCsvFile(File file) throws IOException {
+    	List<GroupData> list =  new ArrayList<GroupData>();
     	FileReader reader = new FileReader(file);
     	BufferedReader bufferedreader = new BufferedReader(reader);
     	String line = bufferedreader.readLine();
     	while (line != null) {
 		    String[] part = line.split(",");
-    		GroupDate group = new GroupDate()
+    		GroupData group = new GroupData()
     		.withGroupName(part[0])
     		.withHeader(part[1])
     		.withFooter(part[2]);
@@ -55,16 +55,16 @@ public class GroupDataGenerator {
     	return list;
 	}
 	
-    public static List<GroupDate> loadGroupsFromXmlFile(File file) throws IOException {
+    public static List<GroupData> loadGroupsFromXmlFile(File file) throws IOException {
     	XStream xstream = new XStream();
-		xstream.alias("group",GroupDate.class);
-		return (List<GroupDate>) xstream.fromXML(file);
+		xstream.alias("group",GroupData.class);
+		return (List<GroupData>) xstream.fromXML(file);
 		
 	}
     
-	private static void saveGroupsToXmlFile(List<GroupDate> groups, File file) throws IOException {
+	private static void saveGroupsToXmlFile(List<GroupData> groups, File file) throws IOException {
 		XStream xstream = new XStream();
-		xstream.alias("group",GroupDate.class);
+		xstream.alias("group",GroupData.class);
 		String xml = xstream.toXML(groups);
 		FileWriter writer = new FileWriter(file);
 	    writer.write(xml);
@@ -73,21 +73,21 @@ public class GroupDataGenerator {
 		
 	}
 
-	private static void saveGroupsToCsvFile(List<GroupDate> groups, File file) throws IOException {
+	private static void saveGroupsToCsvFile(List<GroupData> groups, File file) throws IOException {
 	  FileWriter writer = new FileWriter(file);
-	  for (GroupDate group : groups) {
+	  for (GroupData group : groups) {
 		  writer.write(group.getGroupname()+","+group.getHeader()+","+group.getFooter()+",!"+"\n");
 		
 	}
 		writer.close();
 	}
 
-	public static List<GroupDate> generateRandomGroups(int amount) {
-		List<GroupDate> list =  new ArrayList<GroupDate>();
+	public static List<GroupData> generateRandomGroups(int amount) {
+		List<GroupData> list =  new ArrayList<GroupData>();
 		
 		for (int i = 0; i<amount; i++)
 		{
-			GroupDate group = new GroupDate()
+			GroupData group = new GroupData()
 			 .withGroupName (generateRandomString())
 			 .withHeader (generateRandomString())
 	         .withFooter(generateRandomString());

@@ -18,7 +18,7 @@ public abstract  class WebDriverHelperBase extends HelperBase {
 
 	public WebDriverHelperBase(ApplicationManager manager) {
 		super(manager);
-		this.driver = manager.driver;
+		this.driver = manager.getDriver();
     
     }
 	
@@ -95,6 +95,8 @@ public abstract  class WebDriverHelperBase extends HelperBase {
 		}
 		else return input;
 	    }
+	
+
 	
 
 

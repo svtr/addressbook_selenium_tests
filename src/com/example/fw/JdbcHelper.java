@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.example.tests.GroupDate;
+import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
 
 public class JdbcHelper {
@@ -27,8 +27,8 @@ public class JdbcHelper {
 		}
 	}
 
-	public SortedListOf<GroupDate> listGroups() {
-	  SortedListOf<GroupDate> groups = new SortedListOf<GroupDate>();
+	public SortedListOf<GroupData> listGroups() {
+	  SortedListOf<GroupData> groups = new SortedListOf<GroupData>();
 		Statement st = null;
 		ResultSet res = null;
 		
@@ -36,7 +36,7 @@ public class JdbcHelper {
 			st = conn.createStatement();
 			res = st.executeQuery("SELECT group_id,group_name,group_header,group_footer FROM group_list");
 			while (res.next()) {
-				GroupDate gr = new GroupDate().withId(res.getString(1)).withGroupName(res.getString(2)).withHeader(res.getString(3)).withFooter(res.getString(4));
+				GroupData gr = new GroupData().withId(res.getString(1)).withGroupName(res.getString(2)).withHeader(res.getString(3)).withFooter(res.getString(4));
 				groups.add(gr);
 			}
 

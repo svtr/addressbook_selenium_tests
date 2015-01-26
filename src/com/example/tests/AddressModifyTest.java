@@ -12,19 +12,19 @@ import com.example.utils.SortedListOf;
 public class AddressModifyTest extends TestBase{
 
 	@Test(dataProvider = "addressFromFile")
-	public void modifyAddress(AddressDate address) throws Exception{
+	public void modifyAddress(AddressData address) throws Exception{
 	
 
 	
 	 //save old list
-	SortedListOf<AddressDate> oldList = app.getAddressHelper().GetContacts();
+	SortedListOf<AddressData> oldList = app.getAddressHelper().GetContacts();
 	Random rnd = new Random();
 	int index = rnd.nextInt(oldList.size()-1);
 	app.getAddressHelper().modifyAddress(index,address);  
 
 	
 	 //save new list
-	SortedListOf<AddressDate> newList = app.getAddressHelper().GetContacts();
+	SortedListOf<AddressData> newList = app.getAddressHelper().GetContacts();
 	
     assertThat(newList, equalTo(oldList.without(index).withAdded(address)));
 

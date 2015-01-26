@@ -5,7 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.example.tests.GroupDate;
+import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
 
 public class HibernateHelper extends HelperBase {
@@ -14,12 +14,12 @@ public class HibernateHelper extends HelperBase {
 	  super(manager);
 	}
 
-	public List<GroupDate> listGroups() {
+	public List<GroupData> listGroups() {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		Transaction trans = session.beginTransaction();
 		try {
-          return new SortedListOf<GroupDate>(
-              (List<GroupDate>) session.createQuery("from GroupData").list());
+          return new SortedListOf<GroupData>(
+              (List<GroupData>) session.createQuery("from GroupData").list());
 		} finally {
           trans.commit();
 		}
