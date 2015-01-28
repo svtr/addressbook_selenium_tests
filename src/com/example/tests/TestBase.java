@@ -35,12 +35,13 @@ public class TestBase {
 
 	@BeforeTest
 	public void setUp() throws Exception {
+        //String configFile = System.getProperty("configFile", "test.properties");
 		Properties properties = new Properties();
 		properties.load(new FileReader(new File ("test.properties")));
 		app = new ApplicationManager(properties);
    
 	  }
-	
+
 
 
 	@AfterTest
@@ -78,22 +79,22 @@ public class TestBase {
 	@DataProvider
 	public Iterator<Object[]> groupsFromFile() throws Exception {
 	//
-    if (formattext.equals("xml") ){
+   // if (formattext.equals("xml") ){
 	return wrapGroupDateForProvider(loadGroupsFromXmlFile(new File ("group.xml"))).iterator();
-	}else if  (formattext.equals("csv")){
-	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("group.txt"))).iterator();
-	} else 	return wrapGroupDateForProvider(loadGroupsFromXmlFile(new File ("group.xml"))).iterator();
+//	}else if  (formattext.equals("csv")){
+//	return wrapGroupDateForProvider(loadGroupsFromCsvFile(new File ("group.txt"))).iterator();
+//	} else 	return wrapGroupDateForProvider(loadGroupsFromXmlFile(new File ("group.xml"))).iterator();
     
 	}
 	
 	
 	@DataProvider
 	public Iterator<Object[]> addressFromFile() throws Exception {
-	if (formattext.equals("xml")){
+//	if (formattext.equals("xml")){
 	return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
-	}else if  (formattext.equals("csv")){
-	return wrapAddressDateForProvider(loadAddressFromCsvFile(new File ("address.txt"))).iterator();	
-	}else return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
+//	}else if  (formattext.equals("csv")){
+//	return wrapAddressDateForProvider(loadAddressFromCsvFile(new File ("address.txt"))).iterator();	
+//	}else return wrapAddressDateForProvider(loadAddressFromXmlFile(new File ("address.xml"))).iterator();
 	}
 	
 	protected List<Object[]> wrapAddressDateForProvider(List<AddressData> address) {

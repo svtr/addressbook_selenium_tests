@@ -17,7 +17,7 @@ public class ApplicationManager {
 	
 
 	//protected ApplicationManager app;
-	private WebDriver driver;
+	public static WebDriver driver;
 	public String baseUrl;
 	public boolean acceptNextAlert = true;
     private GroupHelper grouphelper;
@@ -83,6 +83,7 @@ public class ApplicationManager {
 	public WebDriver getDriver() {
 		
 		String browser = properties.getProperty("browser");
+		String formattext = properties.getProperty("formattext");
 		if (driver == null) 
 		{	
 			if ("firefox".equals(browser)) {
@@ -102,7 +103,7 @@ public class ApplicationManager {
 //			 adresshelper = new AddressHelper(this);
 //			 grouphelper = new GroupHelper(this);
 			 driver.get(baseUrl);
-			 formattext = properties.getProperty("formattext");
+			 
 		}
 		return 	driver;
 
