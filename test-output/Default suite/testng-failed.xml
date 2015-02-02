@@ -7,29 +7,33 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testAddressCreationwithValidData" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.example.tests.AddressCreateTest -->
       <class name="com.example.tests.GroupeRemoveTest">
         <methods>
-          <include name="deleteGroup" invocation-numbers="0"/>
+          <include name="deleteGroup"/>
         </methods>
       </class> <!-- com.example.tests.GroupeRemoveTest -->
       <class name="com.example.tests.AddressRemoveTest">
         <methods>
-          <include name="deleteAddress" invocation-numbers="1"/>
+          <include name="deleteAddress"/>
         </methods>
       </class> <!-- com.example.tests.AddressRemoveTest -->
       <class name="com.example.tests.AddressModifyTest">
         <methods>
-          <include name="modifyAddress" invocation-numbers="0 1"/>
+          <include name="modifyAddress"/>
         </methods>
       </class> <!-- com.example.tests.AddressModifyTest -->
       <class name="com.example.tests.GroupeMidifyTest">
         <methods>
-          <include name="modifyGroup" invocation-numbers="0 1"/>
+          <include name="modifyGroup"/>
         </methods>
       </class> <!-- com.example.tests.GroupeMidifyTest -->
+      <class name="com.example.tests.GroupeCreationTests">
+        <methods>
+          <include name="testGroupCreationwithValidData"/>
+        </methods>
+      </class> <!-- com.example.tests.GroupeCreationTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -25,7 +25,7 @@ public class ApplicationManager {
     private HibernateHelper hibernatehelper;
 	private NavigationHelper navigationhelper;
 	private Properties properties;
-	public static String formattext;
+
     	
 	public ApplicationManager(Properties properties){
 		this.properties=properties; 
@@ -83,7 +83,6 @@ public class ApplicationManager {
 	public WebDriver getDriver() {
 		
 		String browser = properties.getProperty("browser");
-		String formattext = properties.getProperty("formattext");
 		if (driver == null) 
 		{	
 			if ("firefox".equals(browser)) {
@@ -98,7 +97,7 @@ public class ApplicationManager {
 			baseUrl = properties.getProperty("baseUrl");
 //			 baseUrl = "http://localhost";
 			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
-//	       Нинициализация  	
+//	         Нинициализация  	
 //			 navigationhelper = new NavigationHelper(this); 
 //			 adresshelper = new AddressHelper(this);
 //			 grouphelper = new GroupHelper(this);

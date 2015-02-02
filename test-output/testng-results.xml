@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="174933" started-at="2015-01-28T09:43:13Z" finished-at="2015-01-28T09:46:08Z">
+  <suite name="Default suite" duration-ms="172776" started-at="2015-01-30T09:48:40Z" finished-at="2015-01-30T09:51:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="174933" started-at="2015-01-28T09:43:13Z" finished-at="2015-01-28T09:46:08Z">
+    <test name="Default test" duration-ms="172776" started-at="2015-01-30T09:48:40Z" finished-at="2015-01-30T09:51:33Z">
       <class name="com.example.tests.AddressRemoveTest">
-        <test-method status="PASS" signature="deleteAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressRemoveTest@3f3afe78]" name="deleteAddress" duration-ms="15037" started-at="2015-01-28T12:45:12Z" data-provider="addressFromFile" finished-at="2015-01-28T12:45:27Z">
+        <test-method status="PASS" signature="deleteAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressRemoveTest@3f3afe78]" name="deleteAddress" duration-ms="13985" started-at="2015-01-30T12:50:38Z" data-provider="addressFromFile" finished-at="2015-01-30T12:50:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test74900384,fname=test-1107665925,  address=test-795958385, home= , mobile=test-776586637, work= , email=test-1222962579, email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-2073342351]]]>
+                <![CDATA[AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAddress -->
-        <test-method status="PASS" signature="deleteAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressRemoveTest@3f3afe78]" name="deleteAddress" duration-ms="16620" started-at="2015-01-28T12:45:27Z" data-provider="addressFromFile" finished-at="2015-01-28T12:45:44Z">
+        <test-method status="PASS" signature="deleteAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressRemoveTest@3f3afe78]" name="deleteAddress" duration-ms="15041" started-at="2015-01-30T12:50:52Z" data-provider="addressFromFile" finished-at="2015-01-30T12:51:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test-1571058135,fname=test-899315592,  address=test1073833039, home=test-1579408519, mobile=test1839804044, work=test-1567646241, email= , email2=test1691756729, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1878469691]]]>
+                <![CDATA[AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]]]>
               </value>
             </param>
           </params>
@@ -31,22 +31,22 @@
         </test-method> <!-- deleteAddress -->
       </class> <!-- com.example.tests.AddressRemoveTest -->
       <class name="com.example.tests.GroupeCreationTests">
-        <test-method status="PASS" signature="testGroupCreationwithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeCreationTests@39ba5a14]" name="testGroupCreationwithValidData" duration-ms="6984" started-at="2015-01-28T12:45:44Z" data-provider="groupsFromFile" finished-at="2015-01-28T12:45:51Z">
+        <test-method status="PASS" signature="testGroupCreationwithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeCreationTests@39ba5a14]" name="testGroupCreationwithValidData" duration-ms="7539" started-at="2015-01-30T12:51:07Z" data-provider="groupsFromFile" finished-at="2015-01-30T12:51:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname=test9384384, header= ,footer=  ]]]>
+                <![CDATA[GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroupCreationwithValidData -->
-        <test-method status="PASS" signature="testGroupCreationwithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeCreationTests@39ba5a14]" name="testGroupCreationwithValidData" duration-ms="3871" started-at="2015-01-28T12:45:51Z" data-provider="groupsFromFile" finished-at="2015-01-28T12:45:54Z">
+        <test-method status="PASS" signature="testGroupCreationwithValidData(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeCreationTests@39ba5a14]" name="testGroupCreationwithValidData" duration-ms="4456" started-at="2015-01-30T12:51:15Z" data-provider="groupsFromFile" finished-at="2015-01-30T12:51:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname= , header= ,footer=test1197385022 ]]]>
+                <![CDATA[GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]]]>
               </value>
             </param>
           </params>
@@ -55,22 +55,22 @@
         </test-method> <!-- testGroupCreationwithValidData -->
       </class> <!-- com.example.tests.GroupeCreationTests -->
       <class name="com.example.tests.AddressModifyTest">
-        <test-method status="PASS" signature="modifyAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressModifyTest@7f63425a]" name="modifyAddress" duration-ms="22825" started-at="2015-01-28T12:44:27Z" data-provider="addressFromFile" finished-at="2015-01-28T12:44:49Z">
+        <test-method status="PASS" signature="modifyAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressModifyTest@7f63425a]" name="modifyAddress" duration-ms="23583" started-at="2015-01-30T12:49:53Z" data-provider="addressFromFile" finished-at="2015-01-30T12:50:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test74900384,fname=test-1107665925,  address=test-795958385, home= , mobile=test-776586637, work= , email=test-1222962579, email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-2073342351]]]>
+                <![CDATA[AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifyAddress -->
-        <test-method status="PASS" signature="modifyAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressModifyTest@7f63425a]" name="modifyAddress" duration-ms="22539" started-at="2015-01-28T12:44:49Z" data-provider="addressFromFile" finished-at="2015-01-28T12:45:12Z">
+        <test-method status="PASS" signature="modifyAddress(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressModifyTest@7f63425a]" name="modifyAddress" duration-ms="21652" started-at="2015-01-30T12:50:17Z" data-provider="addressFromFile" finished-at="2015-01-30T12:50:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test-1571058135,fname=test-899315592,  address=test1073833039, home=test-1579408519, mobile=test1839804044, work=test-1567646241, email= , email2=test1691756729, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1878469691]]]>
+                <![CDATA[AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]]]>
               </value>
             </param>
           </params>
@@ -79,54 +79,54 @@
         </test-method> <!-- modifyAddress -->
       </class> <!-- com.example.tests.AddressModifyTest -->
       <class name="com.example.tests.AddressCreateTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="setUp" is-config="true" duration-ms="19" started-at="2015-01-28T12:43:13Z" finished-at="2015-01-28T12:43:13Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="setUp" is-config="true" duration-ms="20" started-at="2015-01-30T12:48:40Z" finished-at="2015-01-30T12:48:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="testAddressCreationwithValidData" duration-ms="51758" started-at="2015-01-28T12:43:14Z" data-provider="addressFromFile" finished-at="2015-01-28T12:44:05Z">
+        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="testAddressCreationwithValidData" duration-ms="50599" started-at="2015-01-30T12:48:40Z" data-provider="addressFromFile" finished-at="2015-01-30T12:49:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test74900384,fname=test-1107665925,  address=test-795958385, home= , mobile=test-776586637, work= , email=test-1222962579, email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-2073342351]]]>
+                <![CDATA[AddressDate [lastname=test-1143096963,fname=test-1110043187,  address=test-2075716229, home=test-224934943, mobile=test-204014188, work=test400067008, email= , email2=test1658021683, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1842823963]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="testAddressCreationwithValidData" duration-ms="21207" started-at="2015-01-28T12:44:05Z" data-provider="addressFromFile" finished-at="2015-01-28T12:44:27Z">
+        <test-method status="PASS" signature="testAddressCreationwithValidData(com.example.tests.AddressData)[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="testAddressCreationwithValidData" duration-ms="22775" started-at="2015-01-30T12:49:30Z" data-provider="addressFromFile" finished-at="2015-01-30T12:49:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AddressDate [lastname=test-1571058135,fname=test-899315592,  address=test1073833039, home=test-1579408519, mobile=test1839804044, work=test-1567646241, email= , email2=test1691756729, bday=1, bmonth=January, byear=1980, groupdate=group1, address2= , phone2=test-1878469691]]]>
+                <![CDATA[AddressDate [lastname=test1913941389,fname= ,  address= , home= , mobile= , work= , email= , email2= , bday=1, bmonth=January, byear=1980, groupdate=group1, address2=test-1667051763, phone2=test735609077]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddressCreationwithValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="tearDown" is-config="true" duration-ms="415" started-at="2015-01-28T12:46:08Z" finished-at="2015-01-28T12:46:08Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.AddressCreateTest@27f674d]" name="tearDown" is-config="true" duration-ms="337" started-at="2015-01-30T12:51:32Z" finished-at="2015-01-30T12:51:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.example.tests.AddressCreateTest -->
       <class name="com.example.tests.GroupeRemoveTest">
-        <test-method status="PASS" signature="deleteGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeRemoveTest@880ec60]" name="deleteGroup" duration-ms="3303" started-at="2015-01-28T12:46:02Z" data-provider="groupsFromFile" finished-at="2015-01-28T12:46:05Z">
+        <test-method status="PASS" signature="deleteGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeRemoveTest@880ec60]" name="deleteGroup" duration-ms="2902" started-at="2015-01-30T12:51:27Z" data-provider="groupsFromFile" finished-at="2015-01-30T12:51:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname=test9384384, header= ,footer=  ]]]>
+                <![CDATA[GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteGroup -->
-        <test-method status="PASS" signature="deleteGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeRemoveTest@880ec60]" name="deleteGroup" duration-ms="2908" started-at="2015-01-28T12:46:05Z" data-provider="groupsFromFile" finished-at="2015-01-28T12:46:08Z">
+        <test-method status="PASS" signature="deleteGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeRemoveTest@880ec60]" name="deleteGroup" duration-ms="2500" started-at="2015-01-30T12:51:30Z" data-provider="groupsFromFile" finished-at="2015-01-30T12:51:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname= , header= ,footer=test1197385022 ]]]>
+                <![CDATA[GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]]]>
               </value>
             </param>
           </params>
@@ -135,22 +135,22 @@
         </test-method> <!-- deleteGroup -->
       </class> <!-- com.example.tests.GroupeRemoveTest -->
       <class name="com.example.tests.GroupeMidifyTest">
-        <test-method status="PASS" signature="modifyGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeMidifyTest@36d64342]" name="modifyGroup" duration-ms="3541" started-at="2015-01-28T12:45:54Z" finished-at="2015-01-28T12:45:58Z">
+        <test-method status="PASS" signature="modifyGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeMidifyTest@36d64342]" name="modifyGroup" duration-ms="4044" started-at="2015-01-30T12:51:19Z" finished-at="2015-01-30T12:51:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname=test9384384, header= ,footer=  ]]]>
+                <![CDATA[GroupDate [groupname=test2075639110, header=test1437535831,footer=  ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifyGroup -->
-        <test-method status="PASS" signature="modifyGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeMidifyTest@36d64342]" name="modifyGroup" duration-ms="3594" started-at="2015-01-28T12:45:58Z" finished-at="2015-01-28T12:46:02Z">
+        <test-method status="PASS" signature="modifyGroup(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupeMidifyTest@36d64342]" name="modifyGroup" duration-ms="3311" started-at="2015-01-30T12:51:23Z" finished-at="2015-01-30T12:51:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupDate [groupname= , header= ,footer=test1197385022 ]]]>
+                <![CDATA[GroupDate [groupname=test-158785731, header=test-1655945031,footer=  ]]]>
               </value>
             </param>
           </params>
