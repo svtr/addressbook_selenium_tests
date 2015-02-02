@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.testng.Assert;
 
+import com.example.tests.GroupData;
+
 //import com.example.tests.TestBase;
 
 
@@ -25,13 +27,22 @@ public class ApplicationManager {
     private HibernateHelper hibernatehelper;
 	private NavigationHelper navigationhelper;
 	private Properties properties;
+	private ApplicationModel applicationmodel ;
 
     	
 	public ApplicationManager(Properties properties){
-		this.properties=properties; 
+		this.properties=properties; 	
+		applicationmodel = new ApplicationModel();
+		applicationmodel.setGroups(getHibernateHelper().listGroups());
 		
 	
 	}
+	
+	public ApplicationModel getApplicationModel() {
+		
+		return 	applicationmodel;
+
+		}
 	
 	
 	public void stop() {
@@ -107,6 +118,7 @@ public class ApplicationManager {
 		return 	driver;
 
 		}
+
 
 
 

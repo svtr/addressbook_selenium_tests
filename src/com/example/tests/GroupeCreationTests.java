@@ -27,15 +27,17 @@ public class GroupeCreationTests extends TestBase{
 //      app.navigateTO().mainPage();
 //      app.navigateTO().gotoPage("groups");
 	   //save old
-      SortedListOf<GroupData> oldList = new SortedListOf<GroupData>(app.getHibernateHelper().listGroups());
+      SortedListOf<GroupData> oldList = app.getApplicationModel().getGroups();
 
       app.getGroupHelper().createGroup(group);
      
       
-      SortedListOf<GroupData>  newlist= app.getGroupHelper().GetGroups();    
+      SortedListOf<GroupData>  newlist= app.getApplicationModel().getGroups();    
  
       assertEquals(newlist.size(),oldList.size()+1);
 	  assertThat(newlist, equalTo(oldList.withAdded(group)));
+	  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getHibernateHelper().listGroups()));
+	  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getGroupHelper().getUiGroups()));
    
   }
 

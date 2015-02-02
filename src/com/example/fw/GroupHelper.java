@@ -2,7 +2,9 @@ package com.example.fw;
 
 import java.util.List;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
+
 import com.example.tests.GroupData;
 import com.example.utils.*;
 
@@ -18,7 +20,9 @@ public GroupHelper createGroup(GroupData group) {
     	fillGroupForm(group);
         submitForm();
     	manager.navigateTO().gotoPage("group page");
-    	rebuildCacheGroups();
+    	//rebuild model 
+    	manager.getApplicationModel().addGroup(group);
+ //   	rebuildCacheGroups();
     	return this;
 		
 	}
@@ -29,33 +33,36 @@ public GroupHelper modifyGroup(GroupData group, int index) {
 		fillGroupForm(group);
 		submitGroupForm();
 		manager.navigateTO().gotoPage("group page");
-		rebuildCacheGroups();
+    	manager.getApplicationModel().removeGroup(index).addGroup(group);
+//		rebuildCacheGroups();
 		return this;
 	}	
 	
 public GroupHelper deletegroupe(int index) {
 		selectGroupeByIndex(index);
 		submitGroupDelete();
-		cachedGroups = null;
+//		cachedGroups = null;
 		manager.navigateTO().gotoPage("group page");
-		rebuildCacheGroups();
+		manager.getApplicationModel().removeGroup(index);
+//		rebuildCacheGroups();
 		return this;
 		
 	}
 
-private SortedListOf<GroupData> cachedGroups;
+//private SortedListOf<GroupData> cachedGroups;
 
-public SortedListOf<GroupData> GetGroups() {
-	 
-	    if (cachedGroups == null){
-	    rebuildCacheGroups();
-	    } 
-	    return new SortedListOf<GroupData>(cachedGroups);
+//public SortedListOf<GroupData> GetGroups() {
+//	 
+//	    if (cachedGroups == null){
+//	    rebuildCacheGroups();
+//	    } 
+//	    return new SortedListOf<GroupData>(cachedGroups);
 		
-	}
-private void rebuildCacheGroups() {
- 
-	    cachedGroups =  new SortedListOf<GroupData>();
+//	}
+//private void rebuildCacheGroups() {
+public SortedListOf<GroupData> getUiGroups() {
+//	    cachedGroups =  new SortedListOf<GroupData>();
+        SortedListOf<GroupData> groups = new SortedListOf<GroupData>();
 		manager.navigateTO().gotoPage("groups");
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
 		for (WebElement checkbox : checkboxes) {
@@ -64,10 +71,12 @@ private void rebuildCacheGroups() {
 			groupname =  replaceNullOrEmpty(groupname);
 //			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
 //			group.groupname =  replaceNull(group.groupname);
-	        cachedGroups.add(new GroupData().withGroupName(groupname));
+	        groups.add(new GroupData().withGroupName(groupname));
 			
 		}
-	
+		
+		return groups;
+		
 }
 
 //------------------------------------------------------отделяем высокоуровневые методы для читаемости
@@ -75,7 +84,7 @@ private void rebuildCacheGroups() {
 
    private GroupHelper submitGroupDelete() {
 	    click(By.name("delete"));
-	    cachedGroups = null;
+//	    cachedGroups = null;
 	    return this;
 }	
 
@@ -108,18 +117,17 @@ private void rebuildCacheGroups() {
 
 	public GroupHelper submitGroupForm() {
 		click(By.name("update"));
-		cachedGroups = null;
+//		cachedGroups = null;
 		return this;
 	}
 
 
 	public GroupHelper submitForm() {
 		driver.findElement(By.name("submit")).click();
-		cachedGroups = null;
+//		cachedGroups = null;
 		return this;
 	}
 
-	
 
 
 	
