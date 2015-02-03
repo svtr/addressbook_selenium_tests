@@ -32,6 +32,8 @@ public class TestBase {
      
 	public static ApplicationManager app;
     private static String formattext;
+    private int checkCounter;
+    private int checkFrequency;
 
 	@BeforeTest
 	public void setUp() throws Exception {
@@ -40,7 +42,20 @@ public class TestBase {
 		properties.load(new FileReader(new File ("test.properties")));
 		app = new ApplicationManager(properties);
 		formattext = properties.getProperty("formattext");
+		checkCounter = 0;
+		checkFrequency = Integer.parseInt(properties.getProperty("check.frequency","0"));
    
+	  }
+	  
+	  protected boolean wantToCheck() {
+	  checkCounter ++;
+	  if (checkCounter > checkFrequency){
+	  checkCounter = 0;
+      return true;	  
+	  } else {
+	  return false;
+	  }
+	  
 	  }
 
 

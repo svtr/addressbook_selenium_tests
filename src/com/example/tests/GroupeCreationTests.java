@@ -34,10 +34,22 @@ public class GroupeCreationTests extends TestBase{
       
       SortedListOf<GroupData>  newlist= app.getApplicationModel().getGroups();    
  
-      assertEquals(newlist.size(),oldList.size()+1);
-	  assertThat(newlist, equalTo(oldList.withAdded(group)));
-	  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getHibernateHelper().listGroups()));
-	  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getGroupHelper().getUiGroups()));
+ //     assertEquals(newlist.size(),oldList.size()+1);
+//	  assertThat(newlist, equalTo(oldList.withAdded(group)));
+	  
+	  if("yes".equals(app.getProperty("check.db"))) {
+		  if (wantToCheck()) {
+		  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getHibernateHelper().listGroups()));
+		  }
+	  }
+	  
+	  if("yes".equals(app.getProperty("check.ui"))) {
+		  if (wantToCheck()) {
+		  assertThat(app.getApplicationModel().getGroups(),equalTo(app.getGroupHelper().getUiGroups()));
+		  }
+	  }
+	  
+	  
    
   }
 

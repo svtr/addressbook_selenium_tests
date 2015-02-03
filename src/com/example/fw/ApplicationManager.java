@@ -90,7 +90,11 @@ public class ApplicationManager {
 	}
 
 
-
+	public String getProperty(String key){
+		return properties.getProperty(key);
+		
+	}
+	
 	public WebDriver getDriver() {
 		
 		String browser = properties.getProperty("browser");
@@ -121,11 +125,7 @@ public class ApplicationManager {
 
 
 
-
-
-
-
-	
-	
-
 }
+
+
+

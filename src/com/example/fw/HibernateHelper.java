@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.example.tests.AddressData;
 import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
 
@@ -24,4 +25,17 @@ public class HibernateHelper extends HelperBase {
           trans.commit();
 		}
 	}
+
+    public List<AddressData> listAddress() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Transaction trans = session.beginTransaction();
+		try {
+          return new SortedListOf<AddressData>(
+              (List<AddressData>) session.createQuery("from AddressData").list());
+		} finally {
+          trans.commit();
+		}
+	}
+
+
 }

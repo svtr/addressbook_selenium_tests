@@ -27,7 +27,7 @@ public class AddressHelper extends WebDriverHelperBase {
 	    fillFormAddress(address, CREATION);
 	    submitFormCreateAddress();
 	    manager.navigateTO().gotoPage("home page");
-	    rebuildCacheAddress();
+//	    rebuildCacheAddress();
 	    return this;
 	}
 	
@@ -36,7 +36,7 @@ public class AddressHelper extends WebDriverHelperBase {
 		fillFormAddress(address, MODIFICATION);
 		updateAddressForm();
 		manager.navigateTO().gotoPage("home page");
-		rebuildCacheAddress();
+//		rebuildCacheAddress();
 		return this;
 	}
 
@@ -44,28 +44,29 @@ public class AddressHelper extends WebDriverHelperBase {
 		click(By.xpath(".//*[@id='maintable']/tbody/tr[" + (index+2)
 				+ "]/td[7]/a/img"));
 		click(By.xpath("//*[@id='content']/form[2]/input[2]"));
-		cachedAddress = null;
+//		cachedAddress = null;
 	    manager.navigateTO().gotoPage("home page");
-	    rebuildCacheAddress();
+//	    rebuildCacheAddress();
 		return this;
 	}
 	
 	
-	private SortedListOf<AddressData> cachedAddress;
+//	private SortedListOf<AddressData> cachedAddress;
 
-	public SortedListOf<AddressData> GetContacts() {
-		 
-		    if (cachedAddress == null){
-		    rebuildCacheAddress();
-		    } 
-		    return new SortedListOf<AddressData>(cachedAddress);
-	//	    return cachedAddress;
-		
-		}
-	
-	public AddressHelper rebuildCacheAddress() {
-
-		cachedAddress =  new SortedListOf<AddressData>();
+//public SortedListOf<AddressData> GetContacts() {
+//	 
+//	    if (cachedAddress == null){
+//	    rebuildCacheAddress();
+//	    } 
+//	    return new SortedListOf<AddressData>(cachedAddress);
+////	    return cachedAddress;
+//	
+//	}
+//
+//	public AddressHelper rebuildCacheAddress() {
+public SortedListOf<AddressData> getUiAddress() {
+//		cachedAddress =  new SortedListOf<AddressData>();
+        SortedListOf<AddressData> address = new SortedListOf<AddressData>();
 		manager.navigateTO().mainPage();;
 //	    List<AddressDate> addrs = new ArrayList<AddressDate>();
 		List<WebElement> table = driver.findElements(By.xpath(".//*[@id='maintable']/tbody/tr[position()>1 and position()!=last()]"));
@@ -81,17 +82,17 @@ public class AddressHelper extends WebDriverHelperBase {
             String home = td.findElement(By.xpath(".//td[5]")).getText();
             home = replaceNullOrEmpty(home);
             home=home.replaceAll("[ ]", "");
-            cachedAddress.add(new AddressData().withLastName(lastname).withFname(fname).withEmail(email).withHome(home));
+            address.add(new AddressData().withLastName(lastname).withFname(fname).withEmail(email).withHome(home));
 			
 		}
-		return this;
+		return address;
 	
     }
 //---------------------------------------------------------------------------------------------	
 	
 	private AddressHelper submitFormCreateAddress() {
 		driver.findElement(By.name("submit")).click();
-		cachedAddress = null;
+//		cachedAddress = null;
 		return this;
 		
 	}
@@ -183,7 +184,7 @@ public class AddressHelper extends WebDriverHelperBase {
 
 	public AddressHelper updateAddressForm() {
 		click(By.xpath(".//*[@id='content']/form[1]/input[11]"));
-		cachedAddress = null;
+//		cachedAddress = null;
 		return this;
 	}
 	

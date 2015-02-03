@@ -14,11 +14,11 @@ public class GroupeRemoveTest extends TestBase {
 	public void deleteGroup(GroupData group) {
 		
 	    // save old
-         SortedListOf<GroupData> oldList = app.getGroupHelper().GetGroups();
+         SortedListOf<GroupData> oldList = app.getGroupHelper().getUiGroups();
 	    Random rnd = new Random();
 	    int index = rnd.nextInt(oldList.size()-1);
     	app.getGroupHelper().deletegroupe(index);
-	    SortedListOf<GroupData>  newlist= app.getGroupHelper().GetGroups();     
+	    SortedListOf<GroupData>  newlist= app.getGroupHelper().getUiGroups();     
   	    assertThat(newlist, equalTo(oldList.without(index)));
 
 	    

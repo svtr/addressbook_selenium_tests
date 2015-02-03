@@ -16,14 +16,14 @@ public class AddressRemoveTest extends TestBase{
         
 
 		
-		SortedListOf<AddressData> oldList = app.getAddressHelper().GetContacts();
+		SortedListOf<AddressData> oldList = app.getAddressHelper().getUiAddress();
 		Random rnd = new Random();
 		int index = rnd.nextInt(oldList.size()-1);
 		
 		
 	    app.getAddressHelper().deleteAddress(index);
 
-	    SortedListOf<AddressData>  newList= app.getAddressHelper().GetContacts();    
+	    SortedListOf<AddressData>  newList= app.getAddressHelper().getUiAddress();    
   	    assertThat(newList, equalTo(oldList.without(index)));
   	   
 	  
