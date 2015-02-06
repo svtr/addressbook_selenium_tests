@@ -27,7 +27,7 @@ public class GroupeCreationTests extends TestBase{
 //      app.navigateTO().mainPage();
 //      app.navigateTO().gotoPage("groups");
 	   //save old
-      SortedListOf<GroupData> oldList = app.getApplicationModel().getGroups();
+	 SortedListOf<GroupData> oldList = app.getGroupHelper().GetGroupsFormCash();
 
       app.getGroupHelper().createGroup(group);
      

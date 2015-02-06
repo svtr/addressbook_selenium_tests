@@ -21,16 +21,14 @@ public class AddressCreateTest extends TestBase{
   public void testAddressCreationwithValidData(AddressData address) throws Exception {
     
       //save old list
-//	  SortedListOf<AddressData> oldList = app.getAddressHelper().GetContacts();
 	  SortedListOf<AddressData> oldList = app.getApplicationModel().getAddress();
-	  //action
+      //create address from interface
       app.getAddressHelper().createAddress(address);
       //save new list
-//      SortedListOf<AddressData> newList = app.getAddressHelper().GetContacts();
       SortedListOf<AddressData> newList = app.getApplicationModel().getAddress();
-      //compare
- //	  assertThat(newList, equalTo(oldList.withAdded(address)));
- 	  
+
+
+  
  	  
 	  if("yes".equals(app.getProperty("check.db"))) {
 		  if (wantToCheck()) {

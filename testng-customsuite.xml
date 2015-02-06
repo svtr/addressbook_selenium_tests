@@ -6,9 +6,9 @@
 		<class name="com.example.tests.AddressCreateTest" /> 
 <!--                        <class name="com.example.tests.AddressModifyTest" /> -->
 <!--                        <class name="com.example.tests.AddressRemoveTest" />  -->
-			<class name="com.example.tests.GroupeCreationTests" />
-                     <class name="com.example.tests.GroupeMidifyTest" /> 
-<!--                        <class name="com.example.tests.GroupeRemoveTest" /> -->
+<!--			<class name="com.example.tests.GroupeCreationTests" /> -->
+<!--                     <class name="com.example.tests.GroupeMidifyTest" />  -->
+<!--                      <class name="com.example.tests.GroupeRemoveTest" /> -->
 		</classes>
 	</test> <!-- Default test -->
 </suite> <!-- Default suite -->

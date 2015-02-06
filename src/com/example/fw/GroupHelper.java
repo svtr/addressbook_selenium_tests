@@ -1,11 +1,11 @@
 package com.example.fw;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebElement;
 
-import org.openqa.selenium.WebElement;
 import com.example.tests.GroupData;
 import com.example.utils.*;
 
@@ -23,7 +23,7 @@ public GroupHelper createGroup(GroupData group) {
     	manager.navigateTO().gotoPage("group page");
     	//rebuild model 
     	manager.getApplicationModel().addGroup(group);
- //   	rebuildCacheGroups();
+     	rebuildCacheGroups();
     	return this;
 		
 	}
@@ -35,34 +35,41 @@ public GroupHelper modifyGroup(GroupData group, int index) {
 		submitGroupForm();
 		manager.navigateTO().gotoPage("group page");
     	manager.getApplicationModel().removeGroup(index).addGroup(group);
-//		rebuildCacheGroups();
+		rebuildCacheGroups();
 		return this;
 	}	
 	
 public GroupHelper deletegroupe(int index) {
 		selectGroupeByIndex(index);
 		submitGroupDelete();
-//		cachedGroups = null;
+		cachedGroups = null;
 		manager.navigateTO().gotoPage("group page");
 		manager.getApplicationModel().removeGroup(index);
-//		rebuildCacheGroups();
+		rebuildCacheGroups();
 		return this;
 		
 	}
 
-//private SortedListOf<GroupData> cachedGroups;
+private SortedListOf<GroupData> cachedGroups;
 
-//public SortedListOf<GroupData> GetGroups() {
-//	 
-//	    if (cachedGroups == null){
-//	    rebuildCacheGroups();
-//	    } 
-//	    return new SortedListOf<GroupData>(cachedGroups);
+public SortedListOf<GroupData> GetGroupsFormCash() {
+	 
+	    if (cachedGroups == null){
+	    rebuildCacheGroups();
+	    } 
+	    return new SortedListOf<GroupData>(cachedGroups);
 		
-//	}
-//private void rebuildCacheGroups() {
+	}
+	
+private void rebuildCacheGroups() {
+      cachedGroups =  (SortedListOf<GroupData>) manager.getHibernateHelper().listGroups();
+      
+
+}
+
+
 public SortedListOf<GroupData> getUiGroups() {
-//	    cachedGroups =  new SortedListOf<GroupData>();
+	    cachedGroups =  new SortedListOf<GroupData>();
         SortedListOf<GroupData> groups = new SortedListOf<GroupData>();
 		manager.navigateTO().gotoPage("groups");
 		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
@@ -70,8 +77,6 @@ public SortedListOf<GroupData> getUiGroups() {
 			String title = checkbox.getAttribute("title");
 			String groupname=   title.substring("Select (".length(), title.length() - ")".length());
 			groupname =  replaceNullOrEmpty(groupname);
-//			group.groupname =   title.substring("Select (".length(), title.length() - ")".length());
-//			group.groupname =  replaceNull(group.groupname);
 	        groups.add(new GroupData().withGroupName(groupname));
 			
 		}
@@ -85,7 +90,7 @@ public SortedListOf<GroupData> getUiGroups() {
 
    private GroupHelper submitGroupDelete() {
 	    click(By.name("delete"));
-//	    cachedGroups = null;
+	    cachedGroups = null;
 	    return this;
 }	
 
@@ -118,14 +123,14 @@ public SortedListOf<GroupData> getUiGroups() {
 
 	public GroupHelper submitGroupForm() {
 		click(By.name("update"));
-//		cachedGroups = null;
+		cachedGroups = null;
 		return this;
 	}
 
 
 	public GroupHelper submitForm() {
 		driver.findElement(By.name("submit")).click();
-//		cachedGroups = null;
+		cachedGroups = null;
 		return this;
 	}
 
